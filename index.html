@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#151515">
-  <title>逢欣瓦斯・臺東｜線上叫瓦斯</title>
+  <title>GO Gas｜線上叫瓦斯</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,10 +164,9 @@
     }
     .back-btn { position: absolute; left: 18px; bottom: 10px; width: 42px; height: 42px; border-radius: 50%; background: #0E0E0E; display: grid; place-items: center; }
 
-    .demo-btn { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 999px; border: 1px dashed rgba(223,178,62,.7); color: var(--yellow); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
 
     /* ---------- Maps ---------- */
-    .mini-map { position: relative; height: 180px; border-radius: 12px; overflow: hidden; background: #1d2633; }
+    .mini-map { position: relative; isolation: isolate; height: 180px; border-radius: 12px; overflow: hidden; background: #1d2633; }
     .map-el { position: absolute; inset: 0; }
     .map-hit { position: absolute; inset: 0; z-index: 500; }
     .you-pin { position: absolute; left: 50%; top: 50%; z-index: 450; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; pointer-events: none; }
@@ -231,7 +230,7 @@
     .prod-kg { flex: 1; min-width: 0; }
     .prod-kg b { font-size: 34px; font-weight: 900; letter-spacing: .04em; line-height: 1; color: #F1F1F1; }
     .prod-kg sub { font-size: 12px; font-weight: 700; vertical-align: bottom; margin-left: 2px; }
-    .prod-kg .p { display: block; font-size: 13px; color: rgba(255,255,255,.75); margin-top: 6px; letter-spacing: .04em; }
+    .prod-kg .p { display: block; font-size: 13px; color: rgba(255,255,255,.75); margin-top: 6px; letter-spacing: .04em; white-space: nowrap; }
     .qty { display: flex; align-items: center; gap: 12px; }
     .qty button { width: 26px; height: 26px; border-radius: 50%; background: #111; display: grid; place-items: center; transition: transform .1s; }
     .qty button:active { transform: scale(.85); }
@@ -322,7 +321,7 @@
     .thanks-head .dt { display: flex; justify-content: space-between; border-top: 3px solid rgba(255,255,255,.18); margin-top: 18px; padding: 16px 20px 0; font-size: 22px; font-weight: 900; letter-spacing: .06em; }
     .thanks-head .round-back { position: absolute; left: 16px; top: calc(var(--top) + 16px); background: rgba(0,0,0,.35); box-shadow: none; }
     .track-body .card { margin-top: 20px; }
-    .track-map { position: relative; height: 230px; border-radius: 12px; overflow: hidden; margin-top: 18px; background: #1d2633; }
+    .track-map { position: relative; isolation: isolate; height: 230px; border-radius: 12px; overflow: hidden; margin-top: 18px; background: #1d2633; }
     .eta-chip { position: absolute; z-index: 450; left: 10px; top: 10px; padding: 6px 12px; border-radius: 999px; background: rgba(0,0,0,.75); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
 
     .driver { display: flex; align-items: center; gap: 16px; }
@@ -411,6 +410,97 @@
     .acc-row .wait { color: var(--yellow); }
     .acc-btn { width: 100%; margin-top: 12px; padding: 11px; border-radius: 999px; border: 2px solid var(--red); color: #FF8C82; font-size: 15px; font-weight: 900; letter-spacing: .06em; }
     .acc-btn:disabled { border-color: #444; color: #777; cursor: default; }
+    .app.onboarding .sidebar, .app.onboarding .tabbar { display: none !important; }
+    @media (min-width: 960px) { .app.onboarding { grid-template-columns: 1fr; } }
+    .reg { max-width: 520px; margin: 0 auto; padding: calc(var(--top) + 40px) 20px 40px; }
+    .reg-brand { display: flex; align-items: center; gap: 12px; }
+    .reg-mark { width: 46px; height: 46px; border-radius: 14px; display: grid !important; place-items: center; background: linear-gradient(180deg, #C03A33, #8F2421); }
+    .reg-name { font-size: 22px; font-weight: 900; letter-spacing: .04em; }
+    .reg-sub { font-size: 12px; color: var(--muted); letter-spacing: .1em; }
+    .reg-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 34px; }
+    .reg-steps span { padding-top: 10px; border-top: 4px solid #2c2c2c; font-size: 13px; font-weight: 700; color: var(--dim); letter-spacing: .06em; }
+    .reg-steps span.on { border-color: var(--yellow); color: #fff; }
+    .reg-title { font-size: 30px; font-weight: 900; letter-spacing: .06em; margin-top: 28px; }
+    .reg-lead { font-size: 15px; color: var(--muted); margin: 8px 0 22px; line-height: 1.7; letter-spacing: .04em; }
+    .red-btn.wide { width: 100%; padding: 13px; margin-top: 26px; }
+    .agree { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.6; color: #ddd; cursor: pointer; letter-spacing: .03em; }
+    .agree input { appearance: none; -webkit-appearance: none; flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 6px; border: 2px solid #8a8a8a; display: grid; place-items: center; cursor: pointer; }
+    .agree input:checked { background: var(--yellow); border-color: var(--yellow); }
+    .agree input:checked::after { content: ""; width: 6px; height: 11px; border: solid #111; border-width: 0 3px 3px 0; transform: translateY(-1px) rotate(45deg); }
+    .agree.off { opacity: .45; cursor: default; }
+    .agree.off input { cursor: default; }
+
+    .v-pick { width: 100%; display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 10px; background: var(--card); margin-top: 12px; text-align: left; transition: box-shadow .2s; }
+    .v-pick:first-child { margin-top: 0; }
+    .v-pick.on { box-shadow: inset 0 0 0 2px var(--yellow); }
+    .v-pick .nm { font-size: 18px; font-weight: 900; letter-spacing: .06em; }
+    .v-pick .d { font-size: 13px; color: var(--muted); margin-top: 3px; }
+    .v-pick .dot { margin-left: auto; width: 22px; height: 22px; border-radius: 50%; border: 2px solid #8a8a8a; display: grid; place-items: center; flex: none; }
+    .v-pick.on .dot { border-color: var(--yellow); }
+    .v-pick.on .dot::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); }
+    .v-logo { width: 64px; flex: none; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .v-logo .barcode svg { display: block; }
+    .v-logo .bt { font-family: var(--serif); font-size: 9px; color: #ccc; white-space: nowrap; letter-spacing: .06em; }
+
+    .vendor-main { border-radius: 14px; padding: 22px 20px 18px; border: 2px solid transparent; background: linear-gradient(var(--card-2), var(--card-2)) padding-box, linear-gradient(180deg, #9C3B3B, #DFB23E) border-box; }
+    .vendor-main .tag { display: inline-block; padding: 3px 12px; border-radius: 999px; background: var(--yellow); color: #111; font-size: 12px; font-weight: 900; letter-spacing: .08em; }
+    .vendor-main .logo { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 14px; }
+    .vendor-main .logo .brand-text { font-size: 17px; }
+    .vendor-main .vrow { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+    .vendor-main .vrow:first-of-type { margin-top: 14px; }
+    .vendor-main .vrow span:first-child { color: var(--muted); flex: none; }
+    .vendor-main .vrow span:last-child { text-align: right; }
+    .vendor-main .vlinks { display: flex; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+    .vendor-main .vlinks button { font-size: 13px; color: var(--link); text-decoration: underline; font-weight: 700; }
+    .v-other-title { font-size: 15px; font-weight: 900; letter-spacing: .06em; margin: 24px 0 10px; color: #ddd; }
+    .v-row { display: flex; align-items: center; gap: 14px; padding: 14px 4px; border-top: 1px solid var(--line); }
+    .v-row .nm { font-size: 16px; font-weight: 900; letter-spacing: .05em; }
+    .v-row .d { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .v-row .pill-btn { margin-left: auto; }
+    .opt-card { border-radius: 12px; background: var(--well); padding: 16px; margin-top: 12px; }
+    .opt-card .t { font-size: 16px; font-weight: 900; letter-spacing: .05em; display: flex; align-items: center; gap: 8px; }
+    .opt-card .t i { font-style: normal; width: 24px; height: 24px; border-radius: 50%; background: var(--yellow); color: #111; display: grid; place-items: center; font-size: 12px; }
+    .opt-card .d { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.7; }
+    .opt-card .d b { color: #fff; }
+    .opt-card .contact-row { padding: 10px 2px; }
+    .opt-card .agree { margin-top: 12px; font-size: 13px; }
+    .opt-card .act { width: 100%; margin-top: 12px; padding: 11px; border-radius: 999px; font-size: 15px; font-weight: 900; letter-spacing: .06em; }
+    .opt-card .act:disabled { opacity: .4; cursor: default; }
+
+    .contract-box { height: 46vh; min-height: 280px; overflow-y: auto; padding: 18px 18px 26px; border-radius: 8px; background: var(--card); font-size: 14px; line-height: 1.9; color: #D8D8D8; letter-spacing: .03em; }
+    .contract-box h4 { font-size: 15px; color: #fff; margin: 16px 0 4px; letter-spacing: .06em; }
+    .contract-box h4:first-child { margin-top: 0; }
+    .contract-box table { width: 100%; border-collapse: collapse; margin: 6px 0; }
+    .contract-box td { padding: 4px 0; border-bottom: 1px solid var(--line); }
+    .contract-box td:last-child { text-align: right; }
+    .contract-box .sign { margin-top: 18px; padding-top: 12px; border-top: 1px dashed #555; color: var(--muted); font-size: 13px; }
+    .contract-hint { font-size: 12px; color: var(--yellow); text-align: center; margin: 10px 0 14px; letter-spacing: .1em; }
+    .contract-hint.done { color: var(--dim); }
+
+    .dep-hint { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: -4px 0 12px; }
+    .dep-hint b { color: var(--yellow); }
+    .prod-kg .need { display: inline-block; margin-left: 6px; padding: 0 6px; border-radius: 4px; background: rgba(0,0,0,.45); font-size: 11px; color: #FFD27A; }
+    .prod .dep-line { display: block; font-size: 11.5px; color: #FFD27A; font-weight: 700; letter-spacing: .02em; margin-top: 2px; min-height: 0; }
+    .prod .dep-line:empty { display: none; }
+    .h-note { font-size: 13px; color: var(--muted); font-weight: 500; letter-spacing: .04em; }
+    .acc-row .vn { color: #fff; }
+    .text-btn { display: block; margin: 14px auto 0; padding: 6px 12px; color: var(--muted); font-size: 14px; font-weight: 700; letter-spacing: .06em; text-decoration: underline; }
+    .text-btn:hover { color: #fff; }
+    .h-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .pill-btn.sm { padding: 6px 14px; font-size: 13px; letter-spacing: .06em; }
+    .k-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .locate-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: var(--card); font-size: 13px; font-weight: 700; color: #ddd; }
+    .locate-btn svg { width: 16px; height: 16px; }
+    .locate-btn:disabled { opacity: .5; }
+    .acc-input { width: 160px; padding: 6px 12px; border-radius: 999px; border: none; outline: none; background: var(--well); text-align: right; font-size: 14px; font-weight: 700; letter-spacing: .04em; }
+    .acc-input::placeholder { color: #5d5d5d; font-weight: 500; }
+    .acc-links { display: flex; justify-content: space-between; margin-top: 10px; }
+    .acc-links button { font-size: 13px; color: var(--muted); text-decoration: underline; }
+    .acc-links .del { color: #FF8C82; }
+    .sheet select.plain-input, .sheet .plain-input { background: var(--well); }
+    .form-grid { display: grid; gap: 10px; }
+    .form-grid label { font-size: 13px; color: var(--muted); display: block; margin-bottom: 6px; }
+    .st-note { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
     .foot-note { font-size: 12px; color: var(--dim); margin-top: 18px; line-height: 1.6; }
 
     .pay-opt { width: 100%; display: flex; align-items: center; gap: 16px; padding: 18px; border-radius: 8px; background: var(--card); margin-top: 14px; text-align: left; transition: box-shadow .2s; }
@@ -487,7 +577,7 @@
     @keyframes drive { from { transform: translateY(0) rotate(-1deg); } to { transform: translateY(-4px) rotate(1deg); } }
     .loading p { font-size: 17px; font-weight: 700; color: #9A9A9A; letter-spacing: .3em; }
     .loading .bar { width: 160px; height: 6px; border-radius: 6px; background: #262626; overflow: hidden; }
-    .loading .bar i { display: block; height: 100%; width: 0; background: var(--yellow); border-radius: 6px; animation: load 2s var(--ease) forwards; }
+    .loading .bar i { display: block; height: 100%; width: 0; background: var(--yellow); border-radius: 6px; animation: load 1.1s var(--ease) forwards; }
     @keyframes load { to { width: 100%; } }
 
     .picker { position: absolute; inset: 0; z-index: 250; background: #1d2633; display: none; }
@@ -528,6 +618,7 @@
     .rcpt.total { font-size: 18px; font-weight: 900; }
     .rcpt.total span:last-child { color: var(--orange); }
     .contact-row { width: 100%; display: flex; align-items: center; gap: 14px; padding: 14px 4px; border-top: 1px solid var(--line); text-align: left; }
+    a.contact-row { color: inherit; text-decoration: none; }
     .contact-row .ic { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--card-2); flex: none; }
     .contact-row .t { font-size: 16px; font-weight: 900; letter-spacing: .04em; }
     .contact-row .d { font-size: 13px; color: var(--muted); margin-top: 2px; }
@@ -553,31 +644,68 @@
 
   <!-- =================== Desktop sidebar =================== -->
   <aside class="sidebar">
-    <button class="brand-btn" onclick="openSheet('vendor')" aria-label="常用瓦斯行與押金規範">
+    <button class="brand-btn" onclick="openSheet('vendors')" aria-label="常用瓦斯行與押金規範">
       <span class="barcode" data-w="200" data-h="40"></span>
-      <span class="brand-text">逢欣瓦斯 • 臺東</span>
+      <span class="brand-text"></span>
     </button>
     <button class="side-cta" onclick="startOrder()">立即叫瓦斯</button>
     <nav class="side-nav" id="side-nav"></nav>
     <div class="side-foot">
       <button class="pill-btn" onclick="openSheet('contact')"><span data-ico="phone"></span>聯絡我們</button>
       <div>門市營業時間</div>
-      <div class="num" style="color:#cfcfcf; font-weight:700;">08:30 ~ 20:00</div>
+      <div class="num" id="side-hours" style="color:#cfcfcf; font-weight:700;"></div>
     </div>
   </aside>
 
   <div class="main">
+
+  <!-- =================== 註冊 =================== -->
+  <section class="screen" id="s-register">
+    <div class="reg">
+      <div class="reg-brand"><span class="reg-mark" data-ico="flameLg"></span><div><div class="reg-name">GO Gas</div><div class="reg-sub">臺東線上叫瓦斯</div></div></div>
+
+      <div class="reg-steps"><span class="on" id="rs-1">1　個人資料</span><span id="rs-2">2　選擇瓦斯行</span></div>
+
+      <div id="reg-1">
+        <h1 class="reg-title">建立您的帳戶</h1>
+        <p class="reg-lead">填寫一次就好，之後叫瓦斯會自動帶入。</p>
+        <div class="field-card">
+          <div class="field-row" id="g-name-row"><label>姓名</label><input id="g-name" placeholder="您的姓名" autocomplete="name" oninput="setProfile('name', this.value)"></div>
+          <div class="field-row" id="g-phone-row"><label>手機</label><input id="g-phone" type="tel" class="num" placeholder="09xx-xxx-xxx" autocomplete="tel" oninput="setProfile('phone', this.value)"></div>
+        </div>
+        <h3 class="h-section">配送地址</h3>
+        <div class="chip-select">
+          <span class="addr-type-ico"></span><span class="addr-type-label">住家</span><span data-ico="chevDownSm"></span>
+          <select class="addr-type" onchange="setAddrType(this.value)"><option>住家</option><option>公司</option><option>其他</option></select>
+        </div>
+        <div class="addr-card" id="g-addr-card">
+          <textarea class="addr-input" id="g-address" rows="2" placeholder="輸入臺東市區地址" oninput="setProfile('address', this.value)"></textarea>
+          <div class="addr-meta"><button class="link-btn" style="font-size:13px" onclick="openPicker()">在地圖上標記位置</button><span class="num coords"></span></div>
+        </div>
+        <label class="agree" style="margin-top:18px"><input type="checkbox" id="g-agree">我同意本服務蒐集上述資料，僅用於叫氣配送與維修聯絡</label>
+        <button class="red-btn wide" onclick="regNext()">下一步</button>
+      </div>
+
+      <div id="reg-2" class="hidden">
+        <h1 class="reg-title">選擇您的瓦斯行</h1>
+        <p class="reg-lead">之後叫瓦斯都會由這間瓦斯行配送。第一次叫瓦斯時需支付鋼瓶押金並簽署租用契約。</p>
+        <div id="reg-vendors"></div>
+        <button class="red-btn wide" onclick="regFinish()">完成註冊</button>
+        <button class="text-btn" onclick="regStep(1)">回上一步</button>
+      </div>
+    </div>
+  </section>
 
   <!-- =================== 首頁 =================== -->
   <section class="screen" id="s-home">
     <div class="pad">
       <div class="topbar m-only">
         <div class="brand">
-          <button class="brand-btn" onclick="openSheet('vendor')" aria-label="常用瓦斯行與押金規範">
+          <button class="brand-btn" onclick="openSheet('vendors')" aria-label="常用瓦斯行與押金規範">
             <span class="barcode" data-w="200" data-h="40"></span>
-            <span class="brand-text">逢欣瓦斯 • 臺東</span>
+            <span class="brand-text"></span>
           </button>
-          <button class="brand-chev" onclick="openSheet('vendor')" aria-label="瓦斯行資訊"><span data-ico="chevDown"></span></button>
+          <button class="brand-chev" onclick="openSheet('vendors')" aria-label="瓦斯行資訊"><span data-ico="chevDown"></span></button>
         </div>
         <button class="pill-btn" onclick="openSheet('contact')"><span data-ico="phone"></span>聯絡我們</button>
       </div>
@@ -621,9 +749,6 @@
       讓我們將瓦斯配送到您的住處
     </div>
     <div class="pad">
-      <div style="display:flex; justify-content:flex-end; margin: -4px 0 10px;">
-        <button class="demo-btn" onclick="fillDemo()"><span data-ico="bolt"></span>載入展示資料</button>
-      </div>
       <div class="cols">
         <div>
           <div class="mini-map">
@@ -670,6 +795,7 @@
 
         <div class="sticky-col">
           <h3 class="h-section">訂單確認</h3>
+          <div class="dep-hint" id="dep-hint"></div>
           <div id="prod-list"></div>
           <div class="total-row"><span>總計</span><b class="num" id="o-total">$ 0</b></div>
           <div class="total-sub num" id="o-total-sub"></div>
@@ -700,12 +826,9 @@
       預約維修服務
     </div>
     <div class="pad">
-      <div style="display:flex; justify-content:flex-end; margin: -4px 0 10px;">
-        <button class="demo-btn" onclick="fillDemo()"><span data-ico="bolt"></span>載入展示資料</button>
-      </div>
       <div class="cols">
         <div>
-          <h3 class="h-section" style="margin-top: 6px;">檢修項目 <span style="font-size:13px; color:var(--muted); font-weight:500;">（可複選）</span></h3>
+          <h3 class="h-section">檢修項目 <span style="font-size:13px; color:var(--muted); font-weight:500;">（可複選）</span></h3>
           <div id="svc-list"></div>
           <h3 class="h-section">問題描述</h3>
           <div class="field-card">
@@ -713,7 +836,7 @@
           </div>
         </div>
         <div>
-          <h3 class="h-section" style="margin-top: 6px;">檢修地址與聯絡人</h3>
+          <h3 class="h-section">檢修地址與聯絡人</h3>
           <div class="addr-card" id="r-addr-card">
             <textarea class="addr-input" id="r-address" rows="2" placeholder="輸入檢修地址" oninput="setProfile('address', this.value)"></textarea>
           </div>
@@ -750,7 +873,23 @@
       <div class="confirm-title">訂單明細</div>
       <div class="confirm-sub">請確認訂單內容是否正確</div>
       <div class="card flat" id="confirm-rows" style="padding: 6px 14px;"></div>
-      <div class="confirm-foot"><button class="red-btn" id="confirm-btn" onclick="placeOrder()">叫瓦斯</button></div>
+      <div class="confirm-foot"><button class="red-btn" id="confirm-btn" onclick="confirmMode === 'gas' && needsContract() ? go('contract') : placeOrder()">叫瓦斯</button></div>
+    </div></div>
+  </section>
+
+  <!-- =================== 租用契約 =================== -->
+  <section class="screen" id="s-contract" style="padding-bottom: 0;">
+    <div class="page-head">
+      <button class="back-btn" onclick="go('confirm')" aria-label="返回"><span data-ico="back"></span></button>
+      簽署鋼瓶租用契約
+    </div>
+    <div class="pad"><div class="confirm-wrap">
+      <div class="confirm-title" id="ct-title">液化石油氣鋼瓶租用契約</div>
+      <div class="confirm-sub" id="ct-sub"></div>
+      <div class="contract-box" id="contract-box" onscroll="onContractScroll(this)"></div>
+      <div class="contract-hint" id="contract-hint">請閱讀至契約最下方</div>
+      <label class="agree off" id="ct-agree-wrap"><input type="checkbox" id="ct-agree" disabled onchange="$('ct-btn').disabled = !this.checked">我已詳細閱讀並同意上述契約內容，並同意支付鋼瓶押金</label>
+      <div class="confirm-foot"><button class="red-btn" id="ct-btn" disabled onclick="signContract()">同意並叫瓦斯</button></div>
     </div></div>
   </section>
 
@@ -760,7 +899,7 @@
       <button class="round-back" onclick="go('history')" aria-label="返回訂單紀錄"><span data-ico="back"></span></button>
       <div class="thanks-in">
         <h1>感謝您的訂購！</h1>
-        <div class="brand-btn"><span class="barcode" data-w="200" data-h="34"></span><span class="brand-text">逢欣瓦斯 • 臺東</span></div>
+        <div class="brand-btn"><span class="barcode" data-w="200" data-h="34"></span><span class="brand-text"></span></div>
         <div class="dt num"><span id="t-date"></span><span id="t-clock"></span></div>
       </div>
     </div>
@@ -775,7 +914,7 @@
             <div style="text-align:right"><button class="link-btn" onclick="openSheet('receipt')">訂單明細</button></div>
             <div class="track-map">
               <div class="map-el" id="track-map"></div>
-              <div class="eta-chip num" id="t-eta">預計 8 分鐘抵達</div>
+              <div class="eta-chip num" id="t-eta"></div>
             </div>
           </div>
         </div>
@@ -785,11 +924,10 @@
             <div class="driver">
               <div class="avatar" data-ico="person"></div>
               <div style="min-width:0">
-                <div class="nm">曾柏翰</div>
-                <div class="ex">擁有 11 年服務經驗</div>
-                <div class="meta num"><b>4.9 分</b>・98-GAS・隨車 18 桶</div>
+                <div class="nm" id="drv-name"></div>
+                <div class="ex" id="drv-exp"></div>
               </div>
-              <a class="call" href="tel:0912345678" onclick="toast('正在撥打司機電話 0912-345-678')" aria-label="撥打司機電話"><span data-ico="phoneFill"></span></a>
+              <a class="call store-call" aria-label="撥打門市電話"><span data-ico="phoneFill"></span></a>
             </div>
           </div>
 
@@ -800,7 +938,8 @@
             <div class="tips" id="tips"></div>
           </div>
 
-          <button class="red-btn" id="finish-btn" onclick="finishOrder()" disabled>司機抵達後即可完成訂單</button>
+          <button class="red-btn" id="finish-btn" onclick="finishOrder()">確認收到瓦斯</button>
+          <button class="text-btn" onclick="openSheet('cancelOrder')">取消訂單</button>
         </div>
       </div>
     </div>
@@ -812,7 +951,7 @@
       <button class="round-back" onclick="go('history')" aria-label="返回訂單紀錄"><span data-ico="back"></span></button>
       <div class="thanks-in">
         <h1>預約成功！</h1>
-        <div class="brand-btn"><span class="barcode" data-w="200" data-h="34"></span><span class="brand-text">逢欣瓦斯 • 臺東</span></div>
+        <div class="brand-btn"><span class="barcode" data-w="200" data-h="34"></span><span class="brand-text"></span></div>
         <div class="dt num"><span id="rd-date"></span><span id="rd-clock"></span></div>
       </div>
     </div>
@@ -820,27 +959,27 @@
       <div class="cols">
         <div>
           <div class="card">
-            <div class="st-title">技師已排程</div>
+            <div class="st-title">維修已預約</div>
             <div class="st-line num" id="rd-line1"></div>
             <div class="st-line" id="rd-line2"></div>
             <div style="text-align:right; margin-top: 10px;"><button class="link-btn" onclick="openSheet('repairReceipt')">預約明細</button></div>
           </div>
         </div>
         <div>
-          <h3 class="h-section">到府技師</h3>
+          <h3 class="h-section">到府檢修</h3>
           <div class="card">
             <div class="driver">
               <div class="avatar" data-ico="person"></div>
               <div style="min-width:0">
-                <div class="nm">林志明 技師</div>
-                <div class="ex">擁有 15 年檢修經驗</div>
-                <div class="meta"><b>4.8 分</b>・隨車氣體測漏儀</div>
+                <div class="nm">逢欣瓦斯 檢修技師</div>
+                <div class="ex">到府前會與您確認時間</div>
               </div>
-              <a class="call" href="tel:0912345678" onclick="toast('正在撥打技師電話')" aria-label="撥打技師電話"><span data-ico="phoneFill"></span></a>
+              <a class="call store-call" aria-label="撥打門市電話"><span data-ico="phoneFill"></span></a>
             </div>
           </div>
           <div class="warn-note"><span data-ico="alert"></span><div><b>僅收現金</b>：技師到府拆檢後會開立正式報價單，確認後現場以現金付款。</div></div>
-          <button class="red-btn" onclick="go('home')">回到首頁</button>
+          <button class="red-btn" onclick="finishRepair()">檢修已完成</button>
+          <button class="text-btn" onclick="openSheet('cancelRepair')">取消預約</button>
         </div>
       </div>
     </div>
@@ -858,9 +997,9 @@
           <div class="store-card" id="store-card">
             <div class="s-title" id="store-title">門市營業中</div>
             <div class="s-label">營業時間：</div>
-            <div class="s-hours num">08 : 30 ~ 20 : 00</div>
+            <div class="s-hours num" id="store-hours"></div>
             <div class="s-note" id="store-note"></div>
-            <div class="s-brand">逢欣瓦斯 • 臺東</div>
+            <div class="s-brand brand-text"></div>
           </div>
           <h3 class="h-section" style="margin-top: 36px;">為您提供的服務</h3>
           <div class="tiles">
@@ -871,11 +1010,11 @@
         <div>
           <h3 class="h-section m-only" style="margin-top: 36px;">關於我們</h3>
           <div class="card">
-            <img class="about-photo" src="data:image/jpeg;base64,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" alt="逢欣實業有限公司門口">
-            <p class="about-text">深耕臺東的在地瓦斯行。巡迴配送車清晨即在加氣站裝滿檢驗合格鋼瓶出發，接單後直接從市區巡迴前往，免去回店裝車的等待。</p>
-            <div class="fact"><span>服務範圍</span><span>中華路・更生路・新生路・大同路生活圈</span></div>
+            <img class="about-photo" id="about-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCADYAegDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD134MfB3TvhvosFzc28U3iC4jDXNywBMWR/q0PYDoSOp/AD0vNR7+aUODTsA/NLTQaXNIBaKAaKAK19L5cLH2rxb4hayfNaPPFey6lEZIGA9K8O+IWjXPmtIqNtJ613YJLm1MK97aHmepKtzufuK52aLaxrqJNMusEENj6VTfQp2BbYePavehJI8+SZgpEXOAKtR6bI4yFNbuleHJZ7hVKHk46V6LY+D18mOPy88dcUqldRCNNs8dOmyg/dP5VZtdEnnIAQn8K9rj+Hkcq5ZOfpVmLwLFajKoeOelZvFxK9izxVNAmV8NGeD6VvWXhkvATjn3FeiXHh+NW5TGKI9NCRlEWoeIuP2djz3/hHWiIyvHqKiurAwx8DpXob6eyhiYi3pisW70uS5ldUjbjtinGrclwsYHh+MtcKMV0Oq6Y0kHB69BVez0qSyfzHBXHPStaa8SSBV6YPU0TlrdCS0OZsPDL3kjAcEHuK3dK0D+zr5SyE4PJxW94d2M2Qo+tbE8cUj4xhjxWU6z2LjBbiK6m3AjXj2rmNftvMJbJHHFdva6YRGOfqaw/EEEVvH5bEL+NYwlqXNaHC2MbRlsjAJwCauaw6raeTuOQOtR3U8Uas44AYc1nXt4t2NqgFjzXWld3Oe9jn7mORGPIxWXd4k7c1sz2khlwx+XPWorvT44YvMDBjXVFmLOZkQqaZVm5ALtioCK6FsSMxSbafQRSsAzbTcVJik20rAR4pQuak2VYtLRppAADSegyKCzeZgADXTaL4WkuCGlQhB1zXdeAfhyb8JdXcREZwVUj73ua9WsfBFlbncsK5I6Y4FebiMdGD5UddLDuSuz5u1nRRYk+WCR2OK5i4zuOa+oPGPgW3v7F1SEB1GUIGCD6V88+ItDm025eOWNkIPQitMNiFVRFak4M54im7alK4NNK12GAzbSgU7FLtosA3FLinAUu2nYBAKUClC+1OC07ANxQBT8UYoSGIFpwpcUuKdhXFApwFAFOAqrAAFOAoApwFMVwC07FKBTsUCGYoxT8UYpAZOuaJFqcDMqhblR8j+vsaK1iKK4q+ApVpc0tzpp4mcFZH2jt4qJjg1YIqIx5NfLpnsCxnIqUU1VxT6TAKKKKQDXUMMGsbVPD1vqIxLGGHvW3RVRk1sJq5xEngOyjV9sCAN14rlrrwfDb3BjeMeXn5Qe9evSLla53VrCWSRTFHuyfyrqo15X1ZlOmjmdO8J20IEgjG6tm30tIz0xWvBYsEAPBoa3KkcGrdW/UShYjhtVC9BSPbAg5ArSt4Pl5FPa1BrL2tmPlOZvNJSQMdvWsw6UE4UV2VxanYQKqx2J4yma1jW0JcDn7bR/MBDLyaZe+Hfs6GWNOvBrsIbNU7VX1aSK2tXeQhVA70liHeyE6atdnkWsTrbsYnK5B5qjbRxzgsSDjtirviG2bUrua8gB8tegx1xXPWdzNHL8mDuOMd69SKvE4pOzO50m2RI18sZz26YrVl06RSkh5Gc8daqaCztDEWiw5GTW9cI4hLFTx0rlm9TaK0Io78LEOMeua4rxVO08uRIpX061dubi/v7loYYzGnQBgfmpk3h6aKQSSIz4B7df/AK9XCKi7siTbVkeeapdFYmiVgwJz9Ky9PvNtwVkztYYNdf4u8LLa2B1GNWCvg4I6ZrgMvG+BXpUkpR0OSd4s1r26QKW3ZwflFZN5e+bCq8DHYU6UPIM4J4waz3BzW0KaM3IhYZJphX2qbbSba2sK5DtHpSFam2UbKLBch2UBKnCZqdLRnxgE0mBBb2xlcADrXq3gH4YyaiIL282rbONwRT8zen0FYfgHwedc1aKGVH8lcM5VT0z0z2z619G6Fo1vpNnFbW8eyOMYVck4/OvIzDF8nuR3O7C0Ob3pC6PpEWnW6RIuFUADPtWqABQBiivn5Sbd2eolbYhuYVlQgivEvi94eUol2kZBHynA9a9zIzWD4j0CPWbKWBkQllwCwyAa6MLW9nNMyrU+eNj4/uLNkc/LVZo8V7n4k+F0VhprMuXfqzAc59vavHdQszBM6Y+6SK+ko1o1VeJ5FSm4PUzNtKFqYp7UbK3sZ3IgtG2pdlLsp2C5HtpdtSrEW6CnG3cDpQMg20oWpNmKNtUAwLSgU/bShaYDQKcBTgtKFoEIBTgKcFpwWgQgFOxShadigBuKNtPxRigYzbxRT8UUAfaBFJilor4c+hDFFFFABRRRQAUUUZFAB1phjB7U7dSGQUAAjA7UhjX0FLvHqKa0qgfeFO4WHAAUuQaxb/XBBKY4gGZepJ4B9KsWWqpcwLKRtGcHkcGp5rmjpSUeaxosoPBpFRVGBSRyrIoIOQRkU4tiquZ2GOwQgVQ1TT01KDy5F3LnOM4q9J83X86aZAi1UZcuqIcb6HMy+EYkgZEAXcCOPesiL4b2aTDamFA655NWNU+JGkLezabbapaLdROY5A7BSrA4IG7gnqK19I16SeRILlV3uPlYDGfrWixs1pcv6lePOOs9CgsFVSVAzgZrXS0iIxgGuX8X3ebi3h5GxGkOD3yAP5H86l8M+IZJ50sbhmkZwdj9TwM4NYyxLcrM6I4F+y9rE320i2LbvKXPrilbS4XOWQH2q6vNONV7SXc5ORHE+O9IiuNElt0QAsMKB615JJ8PLyMeZKUyegU9PrXvWq6Q98cmUBRyFxXFX1jG99PEkvmeUdjgEjY2Accjrgg+nNehRxqow1ZzvByrTskeQa9pX9nwLGqEDPORzn61zLREk8HivVtd0rUblTbIsMsQlWKR0kRjGGxyVznhW3YrF1HwdJYxj7KgvQQQwVD5gJxjAHWvUpZhSVoylqzlll1dxc4x0R58yEGk2VsX+jXVo5Mtpcwr/wBNYmTH51S+zk9BxXpRnGSujgcWtypspwjycAVY8g+ldF4W8F6j4lnMdnGuFBLO5wB/nNTOcYq7YRi27IpeGfC134i1BLO0VTI3JLcBQOpNeyeGPg5YWASXUSLyUHO3biMe2O9dP4K8E2PhnT4lW3j+1lB502Msx7jPpx0rrFUKMCvnsZmMpy5absj1qGEUVeW5maX4fsNKQrZ2kNurHJEaBcn8K1FXApaK8uUnJ3Z2pJbBRRRUjCgjNFFAGfqmmxX9u8UgO1vSvA/iL8PpdFma5tkdrJsDexyQx9f0r6MIzVDUbCK6heOWNZFYcqwyDXXhsTKlLTYwrUVUR8gDTJGk2hST0wKtyeGb2FUMtpPHv+7ujI3fT1r3PwH4agu9X1PWTZrbJ5v2eKBgN0RAG7Poeg/OvQDpUJXlFP4V6lXM+SVkjihg+ZXbPj+90uexmeKeJ4pEOGRhgiqyREnGK+gvid8PjqcSXmm2Ye63fvSDyUCn/ACvFJdPm068aOaIxyRPhkYdCPWu7D4qNaN1uc9Wk6bszf8ACHgd9Zm3Tny7dcbnBGSSM8fpXY678K7OPTy9llJRzksWB9ql8JyNdWpS0jMO8b5JcDAOMYFdczSQaY1tNMSxXcZGxj6Vx1q1Tn0ZvThHl1Pm6/tDbzMnBKnHFVNvNdZ4t0pLO8IjZSWLEqvIXnpmucaBl7V6kJXVzkkrMr7acFqURk9qlW1djwpqyblYLTgtadto885wkbufRVzS3Wj3FpjzYnTPI3LjNTzK9gszNC04LUhiI7UbTVCGgUuKcBS4pgN20Yp2KRuKNhobiimecu/YcA/zorNVYvZl8rPtGiiivij3wooooAKQtigmqN3csWMaHGPvH+g/z/8AWAJ5bqOPgtk+gqu18S2EUD3NUiCOBSqrDvVWAmlvZAMlyv0Arh5viRHcX13a2Dxs9nI0UvmMScqSCQAemQea664j3RnufQ18meLtG17w7r93JIZ4ZhMzeYpxvBydwwehGf5diKmabWhvh2lO8o3R9H6f8QAsqrerCFPG5OD/APXro9d1+HSNJkvpZFVRgAk8ZJAB/DOfwr5S8M6n4n1TXLHT2nIEsyRkyRqdoJ5PK5xjJr07xb4vie1utH1po5LaxCPct5TgAnBU4GSOufpWS5or3jscKVeoo0Fbvc7WXWrOHT5dTurqJLWIbpJi2VAHv3+nU1neHtau9RtJNQv4ktYJCWggbBaOIZw0h7MeSR/DgDrmuJ0f+xjYC6tLS2Ecg3qfs+0kdj8yhj6j9KZbeMLi9knhXSXtYQNpe8kEZden3MFunYgfhzWDqHrLBSuk39x7R4R8RR6ytwIJ0nhgYIJFIwTjkcdexz7jrXTqQ3NfNo8fWmhjyP7Rl09jhmhiVkDEj72EHp39q9S+GXieXxLpU0wvJLm3ify45mDBicZIJIBOMj8/atqVTm0seTjcF7K8uZeh38x2rkV5DpvxMOs+Mdb0pZWT7LM6wgHKFEOw/XJGfxNepSK0kXzu5xyOf8K+dPG2nt4L+LthJb5Sy1ENNsVQBucMrDjr8wDfjWs1oceG1qJProZnjb4aaqNSnv8ARoLu7tWbzHdCGZHY91HJGec4+tdb8LNA17SNSC65rTwWwtj5EaTk+XISvBByo43dO/erd34xsNKtIpL27W2hmlSP5gSGc5IXjvwTRq3iaw0uKEXEUskl1MltBFGhPmSP0H+fSuf2zdkkexPLowcuZ2t+B0uu3EyarcLdTpO0caRhkGB0J6f8C9au+CQH1Oa5ldUSGPaNzY+Y/wD1gfzriIJXmSS4LHfK7HDMpKhTtUZUkH5VHIznrk9awtL+JNzd+J7jwvp+nzNBFu+03QmIUbeCNoHPzHb16/Ss1K82+x0exUcLGCfxfqfR8V/bOcpcQsCM8ODUwuYTjEqHP+0K8r0DWxDrNlaR3e2aeQAwbuXHf5e+B37V6Y+wqPlGRXXTlzq54OLw/sJ8l7liSRSOCD9K8X03xbZaz4k8R2qXUa3NrqEsbK7YLBTtDD1A249sVyniT46y6P4q8Q2V3ZzXMdvdvDai3fYAE+Ugn3Izn1J9q8+1v43eKLpW+x2FnaRHJ+YM759ck4/SlOLeljXCyp03zyl8rHZWEviTw9488SXV65GjPNLK8MmXlkwDs8oD/gI9COOo40tY124uSkFjc/ZZn5BdMn6AEjnpXnOjePU1S0jbVdS23zENLxsDHdkAYwMYwMcHr9a3I79ZpFmW8YKoOUyoVvc8Z/IiuCtVlzaqx9jluCouknCalfzWl9+uljq/D/xC8Z6bfmz1CK2vrJTzPI/BHOBgktk9PQfz9Q0Wx8J+N7U3Z0iy+0rgToYwJEJ9xyR6GvnO61zSpbhGa/hM2MK8cvzKP95TwPxr2P4FWky2Wo6ksy3avc/Z1dpsbFCqx4CnJy3XPYcDnPThMRUctNDx87y7C0aLkmm79Gn8mv11Oou/hF4WnJaO0mtyf+eU7H9GJFbPhzwnpvhck2KS/Mu1t753c9a1mnYf8smb/dI/riqmp6oLPSry8iXe9vDI4UjILKpODj3GK9SWIm1yyk7HyMaMU7pFTVviHo+i6sml3DSGfy/MfYAfLBPGef8APHrSxfEXQ5dVTT0uSdyqfOK4QM3IUk/5HQ14PZ+KpNfm82706+iv5k2yXs1qQsmORl8cZ7Dp6VGklxDqt5cSXRmglSJYoeQIyu7cR9cg15M8Q4yaPrcHkkK9KMk2297enmfUquGGRT815N4A8X6nqeom0eXzLeGILL83+qIGASfU8cd8k9q9JjvXC5JDD3rppy51dHhYvDSw1R05NN+RoUVVS+jb72V+tWFdXGVYEexqrHMOopM0uaACkZc9aWigCKK3SIuUUDe244HfGP6VL2oooAjkiVxgiuA+IPw+statptQiRo72KMkMnRwOcEfn+deh1HNCs8bRuMqwII9jWtKtKnLmiyKlNTVmeZfC7Q7STTBcYZmbIZSeOK7DVfDUd+D8zqAvyqDwD61sWdhb2MKQ20KRRoMBUGAKsba1qYmUp86M4UUo8rPHI/hNcT6kFvZC8AYn5TgEenr1zmovGHwqCaabrT1w9vGSYv7ygdB717PsHpTZIVkUqygg8EY61qswqpp3JeFhax80+FfANz4g1GS3/wBQkP8ArGIzg5xj65r0bTvgzp0Uafabi4lfHzbcKCf1r0uKxhh/1caJ/ujFWAoFVWzGpN+7oiaeEhFa6nN6Z4L0vS8m1s44mYAEjqawPHfgp9WtI/ssKtIr5PY4r0TimMqnrXNDEzjLmubSpRa5T57134aXGmWMl1knYu4jA49RXBTwGNsV9O+MYGk0e4jgVd8i7cnsD1P5V4J4j0sQXBEKEqowzZ6mvfwOKlVXvHmYmioPQ5kJS7T6Vt6NocuqTbE4x1OCa37j4fXKRF42BGM4YYrulVjF2bOZQk9UcLtNNeM46VsnSZEnEe3LE4rdh8EzPb+Y+UbHQilUqRS1HGDb0PNblJYSZAST3JHAorY8WaNHpykPcHzR91E9+x+v9aK+YxFZxqNQeh6UKd46n2LRRRmuI7goooPSgCC5l8qJn44HesZtRtz8wcyj1jUuM/UVPrzB/IhKggkyc/7OB/NhVBGJPJzVICf7WXyFgkUYyDIQM/lmj7SwX7gDfXikQg9aCoNMCC6mkZSM7cjBxXz1q+tf274y1+OWQ5hujEi/7KDZx7ZTP/Aq+h5I8gmvmvxj4X1LSfHup3No0LI128rIzkFlkO/HAOPvYrHEJODTZ6mT1JU8TGUYuXe2uh6f4A8CaKlpZeIEtcX58whlkbYCSy5C5wOMivMPFXisaF418RpdW8s0kl0NrIduAqgIOPb+fevWfhTrIuLaTSJwUdczQh8ZwT8y8dwcn8T6VheKvgfqmveKLzUo9SsltbuXzCZA3mID2CgYOO3Iz7UQSqQVwxbqYPGSlDTV29GeV6P4o17xDqMot9KtlskYBvNkOVBPr1J/4Ca61oBJEyxFIpGGBI8QfZ+GRmsK/wDAcei6/eDT9dvhbRSGNfLjCmTAw3zc8Zz26VrJINojaMyJwCZOS31+tefX5VL3T6/KlialButfXXdfhbVGPcfDfxd4pvFMVsdUihBRbhQkManPI5I56evavoH4W+FpvBvhK00q6SNbkM8kuw7l3MxIGe+F2j8Ki+FqIvhSO3igMVvbyukPJO4E7jySejMw/DHauuU5PB4FenT+BWPhsdzLETUt797/AIl0EbT6mvGfjxpyvqvg6/AO+O+eDHYhwrc/9+/1NevCSvM/jXe2Nna6BPfzpBbw6l5rOykniGTAGASTkinPZmWHaVWLfdHi3xdilk8M26xQu0cV/HK8gXIjO1wAfTOf0r0LQYrfWrnS7y5k2pbY1BB/eeNGdc56f59aqeK7aw8Q/BDxBrenofLaWN4pGQguIpVBPr1LDt0p/guW1Npo7XzRC38pI5mcgKIiNjFs9BtzmuLlcFG/c+m+sQxNTEKGzjp8keY+AfF3iF/EcOm3lzusPJkZlKgkEDIO7G7rgde9dD4r16XQFQ+H4ra1nvmL3EiwjcSuMH0/iPb1Pc10Op6P4O0O5u7rw6mywcYe8nm3LJg8BSeiZ/E4B5wK5G58aQeHvEmkXd1p0Fzp99aq5MsQd0TzZFBGR8p+TdjuGAPPRq0qrcVojFv2GBiqjtUk9PJf1+Z3/wAA/BWsnWJfGWsNKY5Ldo7dp8l5ixU7x/shQQPXPHSvedxxiuX8O+M7TUra3eWQNHOgaK4UYVgemR2/znFdQMcHPB6V2RmpbHz1elOnL3+v4nlviD4AaP4g8RXmrSandW8V2/mvbxRr8rn7xDHsTz0PU81Ef2bfCcdvKFn1OeYoQnnTLt3dshVU46d69aAFSAZq+ZmNj4/sPAcvgLXrt9Ws2fUbcFFityHYoQDlcHksDwODjII+bhlvqc8vii/sZJX8kQRzxRSW5heLJIIO4ZJ5HNdR8RLmO88ZeIoJHkR2n8kKGJcnaACo65wVwB7Adqwri7tbLULLT7m/uLu9nRxC00hkk2hdzZPAx8mOnUfU15mId3K+591lCcKVCVNpR+1r1u1+PT0LifAzV/Ftt/bulHSvKmdh5TSsr5XgkjbjJI9ffqa+jfDuhWXhzSINPsLS3tUjUb1gQKHfABY4HJOOp5rlPgxcmbw1d27kZhvGwM8hSikfrurv+K78O704vyPlM3g4Y2rHzZg+Ob660vwdrd7ZuyXMFlNJGyjkMEOK+VrP4j3MWnC3m07zLhOFkL4XGOp45P8AP2r7CubaK6gkt541lilUo6OMhlIwQR6Vwlh8EfBWnXk1z/ZrXRkIKRXUheOL2Ve4/wB7dVVKUZ6SOfC4yrhm3Sdmz580TxJrGs6jDNJq+mQWanMlqi4d+uMFhzz6NXQz3EltJJKzjYoJJPAAHfr/AJx+fN6x4Nf4eeLDZano51G78vzEktF82IKx+VsEDaRtbr6jpjnodPdjl2iKFwTtlIYnPqQTXk4umoysj73h/ETrUnKWr13b/wCG+VzjtY8Y31tqbKn2e8s9wYSBTnBAJHX8M817/wDArW9U1bRJp5ix0rdttzK2WVxwyjvt6f071WsPhx4K8deH2+zWM9ldRfu3ulULJv4O4gfK2fzwexwa7HwJ4QXwPoEekLdG72O8hlMezJY9MZP869GlQgrTgfI47McQ3Uw9bVX67r0OrDqTjPvTgWQ5GQfasTXtQk0vR7++hA329tJMu4ZGVUnn8q+dtP8Ai7q2pRvJe69dwSFiSgkMSjnttwB1xj2rStU9nG9rnJgMH9aq+z51H1PXPEvxsuNG8WT6DZWcM4s9onactudiobAx90AEcnOeemOe48KeP9M8VQv5Qkt7mIAyQSdVz3BHUe/54r5lGqxa5eyXqTRXlwSFe4BDuTjgF+vTitGx8Wf8I9exzJqUNld7cBiyg7SehDcY47+lecsY3U2dux9XPhunHCazjz9HfR+T/wCAfWCuHGVII9qdmvGfBvxXkvbiC21AxyCZhGl3bkDLHgbgOOfUflXqkOpkACVd3uK7qc1UV4nymLwlXCz5Kq/yZpUVFFPHMMowPqO4qTNUcwtFFFABRRRQAUUUUAFMlkWJGd2CqoySTgAU+mOiupVgGB7EUAZ+k63b6wsz2yy7In2bnXbv4ByB1xz1+tWbyWRIHMKq0mPlDHAz71yusLa6Briarf6tlWOIrMhVCKBt3ADlsbjknsR/dFYXiP4jKkLRta39lHIWSO4aIkEBGYtwOhCkDGScjimkS3Ybq/iLUrCKHTprkXdwyJGHhhysjM2C+5jjC46ZJ9eoNefeL7nN9NAqRxpHKYxhgdxxuB6DqpB//Vk4zeLby6s7yLR7/Uri6tTczuPlaJYyCPl4L5AwABgZAPU4LfDGmazruo3L31vcxR7mkEl0RuIPAbsTwuBkdM88V2YGs4VEu5zYiPNE7j4b2ksjkrHvBcemBXrMmlR3EBjdRtIxXL+EbaGzuI4Yom2Rpt3EcZrunIjTJNdGMrN1NCaEEo2ZwVz4KsoJvMjtxuB3BmOelOurWF7UwkkE8FgcH862tQ1W03NEZ1eTPRf4awbq5tYdqGcFn5CnqeQPxOSBj3qlOTj74WSeh4b4+sNRn1CRoLe4YDMqmQZ2joOdoIGB69T1zySu48U6nb3VqTHblpJGKRrgiR8LwcYBxk4PpnOaK8ypTXNubKR9CE03dSNxUTPioSNmycNmgmoUkHrT91NoVzC1l2k1QJnAhgBx672P/wAbqqjUXFzFca5qEazRvND5cZiVgXUbdwJGcgHefypDkNtPH4UIonRu1TAhhjAxjGDVVcjmpoz7UwJSmBk18ha9481WPxJql0YRc2891JJGjDlFLkgflxX2Eill4rzPxd8AtG8R3k99p91NpVzMSzqIxJEzHqduQRn2OPaplCMlaRtQxFShP2lJ2Z4jp3xL0l5MXMM9k7DGdoZc+54P6GvRvDnj8zLEdL8QIWf92luswOSB2jcZ/Tt1rlte/Z58T2m/7LDY6sq4IW3lCyY9Sr4A/AmvOda8DaloRIv9N1DTSTtBmiaNWPoCRg/hWP1VLWDPUee1ai5a8VJeaPWLrwJJMJJdH8Q3VlcE5Ec+ZIxx07MPx3H61Dc6B4ktfCNzBeXX27VpXMYW2TI2s6rhcAFvly3TPOMcV5dp3ivxZ4eVY7fUXmt06RygNgegznA+mK9C8OfFXS9cCWussNNuRgb2/wBUR0/D1JNZTpzjurnRQxtCXuxk4XTW90rn0T8PtDuNB8EaRp15lbiK3BlVmyVdsswJ9ixH4VumMr6YxmvFILy9s7drqw1HFqMPvt5sJ9eDiqVt8VdSGrW2n6dr0dzdXMiwQ2u5ZRI5OApPO3k4ySMVccRd2sc9TJnGPN7WNvPQ91bgHg8V5l8bPA3iHxpZaTa6TYLdRwyySzbpUXYdoCnk88F+me1erKpaMCULux823pn29qcoRcKOuOK6keJY821LwodJ+DmreG4YmV7bSph8xG53KuxY4JABbJ65r558InxH4ht7vRbdZLpfsL+XFbJiTGQCcj5jgMePfpX2bPDHNDJDIoaORSrL6gjBFcz4I8JeF/DU99b6LYW1vcxybZG5aXY3zAFiScZzx/s+1S0nuXCpOHwOx8z+DPgH4l1zWIo7+xvtOslYGa4u0KFV9FVuWJwe2B3r2L4q/A3TPEvh5JdFikg1LTbRILeJGAWeNAAEOR97AODkc9fb2BosE0wrj0qiLnxX4O8fat4EnfTb6Ca5slchoHyGjbpxxwQeo7/Wvqr4bXH9u+DrHVXaWNbrdJFGTzGu7AB/LP41znjr4G6L4x1T+1YbltLunOZ/LjDpMfUqSMN7j8QTzXdaHp1n4c0az0m0ci3s4lhQyMCxAGMk+p61PJG/MjV4ibp+yb0L4tWLAmeUgZ4+UfyA/wA+9SpbMqMBPISRgE7eP0qBtStIuJLuBP8AekAqM+JtDRij6zpqsDgj7SnB/Om0ZXPkjxv47n1rxpqd3Y6JBHcSTmESMmWfACdhu5CjjNZXiHRNa+HGr6Trmu24fUdQheR4pAC0ERICg8fIxw3ToCBx8wr6m0bw58NvDl8+o6cNFju2YuZ5LoSupPUqXY7e/TFRfETwLoHxT0U25ntzewhvst3GQzQseoPqpI5Htxgip9nHXTc6frta0Y82kdv8/N+bPP8A4YePtNsHkdFDWl9sLOCcwsuRyoB9f0717SVlkVJkSKRR86GOU/MCPpg8Gvkjw74F8QeEfifpfh68icLLeQieJAWSa3Ljeykfw7d3PbHbBr7DVVSNURQqqAABwAPSlSpyguW+nQ1zDF08VJVUrTfxdn5opedIcZtZ1z1yV4/WmXUrQ28kqIWdELBcHkgdKv7BTXi3cdRWx5x8qTeM38fTyaqbpYLzO14JF3oEGMELkYwMg4IGTk5yKq2l2biS5ZQ3lxsnlSgjbJlcsRjOAG45JrR8efAXX7fxldQ+FbWePTr5XkjaJyqRDHzRs3bnoCeQR71w3geXUrTXLfwndxOrzXK2qCRSDFKzBfm9BknIx2rz8RhpO8o6n12TZ3TpOnRq3ile7vp5XX6n0R8LvGOix+GtO0iW6VbqBTFJJx5bSZORuHGfc/rkGvRWWvjm0OveDfG11ok9k80s94Yfs5OAxZ/lKscYzkYJ4wRmvrnSYL2z0u0t7tFeSKFUcq+SSB7jn65rspOd7SR8/i40HFTpN3vqn+a9TE+IHi608GeH2vru3W685xbxwMcLIzAkgnB42hj74x3r5w1zwtod/eNJYrIlnMA6xuPnjz/Du7gdj3Hoa93+NXhS78ZeCZrOxjb7VazrdIjDHmbQwIB6ZwxI+gr5v0nTfGhuf7Hsra8kuAdoiFsTInfuOB3yePpU141JL927GuWVcHTnfFxbXS36nSW/2SydbC3EVvsiMiwR8bU3AE4+p6nqc+9YT2Fv4lvr62u9Je2mhIVZWPzOvzAMPbj361tr8PdT8C+I421a4Wa9v9P86ZVO7yiZcBS3c4XkjjPHOMmSyiuoY0+2TCVw0nzdeC25Rn1A4rypx9jJ66n3GGr/ANoUYe5aF2rWVrKyXo9ehrfBP4f6npHjRNSuLO5Fkls8kNzImYmJIC4J74J46jnpivoq2uH6T7OP4lzz+Hbt61zHgC5F14RsGB+6JEwO2JGA/QCugYAjAJr2abvBSXU/PMZD2dedPs2vxMjX/iRoehStBHK97dIcFLcjCH0Zs4BHpya3dA8dabrEFs0F5C8k4YiBnAlG3G4Y9RkfnXyBpT+IPD+vHRtStnSIu6s0in5WHXB75P1zWx9quLy61WGFl+S3i8gj5fvx7uT+OK4qlepCb5krH0GFyvCYnDw9nJqo7/NpX+4+xrXVrG9leCC7gkmQZeJXBdR6kdRVvNfH3hrV9U0SS11GN/sl9CSfkIxjOMHHGCByPevqLw/4ifUtJsr24iKfaYElK90LKDj361dCt7VtW1RyZrlDwMYVFK8ZLqrO/mjoKKZHKkq7kYEe1PzW54wUUUUAFBoooAxPFVlLqGlTWaiQxXCmKYoFJ8sg7h82RyMjoevSuf8AD1tazWqW0zieW1jEUjE87wCCSMcZxkd8N0HfuWUMCCMiuS0rTZtG8QXaXEVjt1AmdWgGGQjauCTy2eD7fQVpCViZRuY958ItBmuWv7NJbKRoZI5BBjbLuxtLKQclSARjFQ+ANKg06DUdHkgjhkspwPIEaL5auN6/dJGeef8A69ehPKsSY44rzjWrqw0Lxdc6qTZwrdWyJKUQCQPuI3ux6KRgZyM7R6VUdHfYhvQ6e71TSdARZ725gtYywQNIwVQTk9/YE/QGo9U1YXEYEEgYeoPBFeL+Kta1S/u3ttXSM291tS3t1YMqvhgfn25yRgrwCOe+K3dA1ODTdNlt4WXaJGLMc8k+ufy49K7KFOU56ownNJFbxRrk1hesIIJZCWO1U6scZ/KoE8WafLbMupT+XDNmIq4YE9MjHXHIGR61y3jxotcuViS5kEsZyVXIx2yp/hGCcsQ30yK4y5udPsbaG3vFmW5Us/nx7QjgIowxTG7cCCTyc4POeZr4ucZShZWJp0k0mdH49vYZbzytNmtmsoELBZkBiDseQjAHGBk84AI5NFcZpN3amxaO2EourzBmhSJXBUHBXPJC5CnJOGxz0AJXjzq8zvY61E+8ZTxVRpOcVZmYAVQdsmutAyTfipElyKrhiRilU4piPn69tLT4r6h430uFootY0nVZZLS5Q4Z1/wBWFJHb9yB7ZX0xXj//AAm/jzwdcm3tdd1S3eBiGt5pGPlkdij5H4EV1l54iuPhF8f9WubyLy7C9uXMyxrgNbzNvDAf7Jwfqpru/iZ8P7b4hRWnifRGt4i0nk3LBgVnh3YWZSpIJ5HBwcMM4IxU+ppcwfA3xW+K+v5js9PsdcKY3tLahMZ6AujIoJ9/Q+9dPf8Ax41bwpdra+K/BE1m5G7db3XO31UMpDc+jcV6B4K0O00TTrays4xHFAgUcctxgsfUnuaX4leELfxn4YutNkWMXAUyW0jZ/dyj7p47HofYmgDm/D/7Q3hPWp4be3Oo29zMwWOKezZ9xPbMW7+Vc3afGR/EnxktdD1GNIdHt5ZNPWNsqHuenmMM4I3AIFbPUnr0f4d8JaT8NNEl1bUDGbm3g825uWHyqOfljyBjPTnlj+QzdJ0nWPHV2dQ8A/Dyw0iO5fz5fEPiKNpHeVm3GSKJiQPmyQVDDp0xSBM+jERUUKoCqOgHAFNeNZUKSKrq3BVhkH602yWeK2jivHiaeNFWR0yFZ8ckA9B6cmpCHfJjVmXGenX6Z4qgOI8UfBrwf4oEkkmnLYXchybmy/dtnHUr90/iK8S8afs5+INJJm0tU1q1H8UK7Jl+qE8/8BJ+lfSd3qr28wh8tBI3OSc4+o/+vWdrHiB9OSNmlC7jljwMfn/jW0KE5WSW5jKrCJ8iWnws8U38vlQ+HtbPPJe0kRR9SwAH516R8NvhJJ4X8RWWt+KdS03SRYyCdbR7lJJpGHI4UkAZ54JPHTnNej6j4vhuLaWIO0rc4LHOBXDvIt9db5k35PPX1rvpZY5fE7HLUx1tFqeu3HxR8MWuQuoPcMONsULnP4kAfrWZdfF61ijL22k3ko7GRlRcfUFv5Vw15YaXZxA+TtfbnDZ5og1CzWPy5okww4BGcCumOXUVrqzB42ptojoJfi3q7RBxpdlGrAkb5Wfr2421jjx/4jnnmvLW6jtHI2skEYcMNzEf6zceNx6Y4wOgGM7UtRsliMVvEvzDnArFhvJbZj5BAXOeQDXTTwNG11Awniql9ZG5dePvFE5zLrl19I9qf+ggVk3HiXW7k5l1jUm9vtL4/LNUXZnYsx5JzTStdccPTjtFfcYOtN7tjpLueTPmTyvn+85NRHDdQD9RmnFaQqRWqilsiHJkYhjXkRoPoKswTGEqUwu05GKixirNlb/aJcHlQDRJK2ok3c9a+F2uyanvtbnypQBkBlGQB/OvSo7W2RtyW8KMRglUAJFeMfC61e18QMWYMohblezZHX9a9nhmDLXy2Y04xq+6e3g6jcNR5t4S24xR7hwDtGf88UeREOiKPoKPMB70tefY6+bsN+zx+/5mkFuo6M1BlANAkFOzFzIhn0iyvB/pVtBcY6GRASPoe3QVy+pfCDwlqOrwaz9int9Tt5Eljuorh9wZMbchiVOMDqO1dirZFOBpalJo8/8AFfwqXxPd2N5PfRPPYTLNFI0GyUlW3bS6nG04H8OfQ1rPda5aI7Xnh6SXBPNhcpNxk84fyz05wAeuOa6vNFF2OyOI/wCE20CJgt7eNpbk7dupQva8+gMoUH8Ca17eWzvoVmtpYp4j92SJgR+BFb0sMc6FJY0kQ9VYZBrk774V+Fbqf7VaWL6ReZz9p0uVrV/x2EA/iDT5hcp4z8c9Rg0XxvpzXdwUguLHapcjCEOc8+n3ep9a8w0LS/M1mbWbXURe2M6uuGLZjJYHG09BwPSvefiH8A9W8XR2uPE51BbPcIo9QhVZdjEZXzkXnoMbkP6mvF734WePvhzNJPNotxNY4G97UieM899p4+pxjNctelzXlHdnuZXmcaLhTrL3Yu+m6/zR7f8ACmfzfD0sIIzDcsCv90FVI/Pn8q7dhtwcVxXwlsNL1PwrDe+dDNc3LGZo4pP3lrkBdm5TkH5cnpn04rsJ7PULcN9mmiuVxxHc/Id2OMOo4HTqp/XjegnGmlI8/M6lOri6lSk7pu582+JLufV7y5utUuxDMl9uLt/stgKM9Bxiqd+smo6nqUcdytnPJBb/AL7aQqYgTa2AMn1GOua2b7Sf+Ex1eTTra4srWS4n3h5X/dxsDvILDr0IHviovibs0nxl4ivbdkJ2RSknO0YiXj+vHqK4ppuM5Lv+qPp8PVhGph6U1a8G21v8MkL4d0fUvEOs6ZY2ADbJlluJJD92FCCzNgYycAcDGWx719IQvIAFc7x/e6H9OPX07cV86+FfHcuh6Kq2Fog1XVH2fbYgZFjj4KhRjA/iYs3Axz049l+HY1MeF7aXUr0XRmAkgJJZljIBAZj1Oc/T1NbYOSXuW16nDxBSnUf1hy91WUU3ra2/lfz1Z2EMzxsGjfFadvfq/wAsmFPY9jXlvjX4nW/hbUItKtYPtOosFkcPxGiHPfqW4+nv2rQ0r4peHdQt4POme2vZisYtWUktIxAChuhyTgEke+K6JVIc3K3qeJDA15UfbxjeO1/8+x6aDS1x2t+O9M8HraLqszRPdZEcCoXJxjdgjgY3DrXSaXq9jrNpHd2Fwk8MgyrKaLq9jHkly89tNrl2kzRmuT+IVwE0iS3GqXFlPcKUtxbzCKRnwfusSOTkAD1IpN2JOk/tC1824i85N9soaVQwJQEZGR1HArjPFHi6O6ttOu9C1TTCEu4fOaSUMRFIdm5VB54YtjOeBXjd/wCKb3wfq128323VdEuIikLoQmZpFEe99rlXICSKT1ycc4FcHda7Lqimb/VXpyCihmKxkEBQ2cY2nnpgAYxkAYTrONtBXPcviN8SV0m5uNHtL60MoKiYkl/KBI2gqMlt2cYHQdeteaeN/F0N3qzpaNE7W4WQyeZu3u2MoVHBAVSG9yORgg8Rq95A14mmrGI0iAEbSTusiqf4SxA4xwNw+7j61cnsrlVe3gfzzbW6biDmbeBwWVwCuN3Dc4wR60SxMne+zM+Rblu91PVXgtbeF7Wx35d0XzRJvcht4IHYsR9fqAL8fiWw0sbTfbkVHAibk53fMCx5PXPHBMZ57HA1Cykls4JLy+njMTIkfl7CpGAzMASABsHr1XPesLVNLW2a3ku5nuJvLAHlrkBe4xg7sncN2BzyMjpvTxNWOtyXTizqNWnj1F18x2imkOzeyfKFK5CZPA9cjqM5xnjiX1htRlgVba3NxgBpX+VpBtKr6hjwCcjrjAxV+TWbLy47HTWguACqxOEC4c7jyrcnC8Zwcke+KrarqNnZ2yyamIvtEu9Y4o8M6r15K4VRuJ6DI2DAwRiJylOTb3LjFJWRKk9vpkRgvZY2naXc8Sou2NiuQCzJyoDEFd3Ujp1BXNQ308rSz2zm3kBeRBbSfN8uSWzkkYHGc9Mnkg0Vn7NvqWfpDKvBqm45xipPtgIpjSq31rtSIbGEFTk05CGrM1zxNovhuAT6zqtlp8bfdNxMqbvoCcn8K8yvv2hLS/vZbDwT4Z1fxTcR/KZIIzHCDnGc4Zsd+VA96NBWZs/GX4M6d8Sra2v45kstUsQR5p+VZ4upjdsEj2bnGTwa8o+Fnw31vwddQXWp3CpFqMInjtoJn2gZwN6kDJwxx165ruGsPjh42Oy8vdG8H2DH54ogJpnQ9jgtn/vpaTwv4Nfwfftp1xqV5qd07ie4ubttzvIwAPPXGEHXk5zUspM9O0SPbGOP0qTXpZbfTrmWAIZliYxhxld2OMj0zU2kx4hB9qi15sWjAdaCzx74T3mu/E3x1NeazY2v/CO6N5qpCsB8iackqpIbO5wMt1O3jucn6H3AVh6dHaaRYQ2NnDFBBCu1Y41CqO54HqSSfc1K+pKvU1apNmTmah8sPvKru/vY5qvNqcMAO9gPTmsW515IzgnFc9qurvKryRjcVHNdNLBuT1MZ17Iqa94ih/tua4AKNEMZB/1nHFcbr2vTaxNukYlRwq9hUOrXT3NyzHcpxgg1nbSTwK+hoYeMEmeRVrOTZNGjyD5mHPSmi4e1c+UQB9P61NCvlOpYZx2qpcsGkPb2rdK5i3YimuJpjmSRn+p6VCzEipjwOBmmGNj0FaJE3ITTSOalKFTg00rQIjK0Yp+3j2pMUANxSYzTyKMUBcjxzT4ZpIG3IxU+1OVCzYHOa0LOwidAZQC2SMEnjFTJpLUaTZs+CdRI1iEmcpJjbjoGr2W3uysYye1eCWlpd2l+lxZRmZUfClRkZ9K9N0zUtRezP2tBGSMgj+H2rycdRUmpI78LUsrM7i1vEuASjZwcGryvxXL+Gy0dqzPnLMSCcDI9a6COUEZzXi1adnZHowldXHyjALZqAS4NLcygR9aoedmpSKNNJvepVmFZSzgDNSLcbulJoLmorg96kU5qrbKSMmrQwBxWcjSItFFFSaBRiiigDn9W8B+HtYuDdy6ettfcEXtmxt7gEDA/eIQx47EkVgr4c8beHosafq1n4it16W+pKYZwvPAmXIY4wMsvPrXfUUAfMXwy0qHwR4/1afxtbzaG9wxNgL5yIAzs+VEn3GO04Bz61h+PNS0jxH4l1m2htIba382S3IjkBEwBwXGAB833u/3up7fWV9p9pqds9re20NzBIMNFMgdW+oNeQ+OP2ZvDfiBJZtCkbR7l8nyhloGPptzlfw4HpWdWHPFxWh3YDG/Vq0aslzJJqz7O/wDmeBLe6H4atFtY5FVF6Ro5kbP4k4/SvXfhn8SllSy0e8Mf2ZgI7a4HBQ9kcfpntxn1Fyx/Zi8O2+nSW+pX15c3kiFVlCrEiN2YICc/Qsa5j4e/BvW/DHxEhstYhluNJQNMlxBnyXK4KEn+HnHynB+o65Rwsqb54S1636nq189pYuDoYiklC3u8u8X0Y39oXw1qEGq6f4qsldoFhFrNt/gIdmUn67yM+ox3qp8HtHm8d69b39xYmGDR5Umkk80BvM5KALycFlyfYda+hNR0yK4t2t7i1F5bSjZLGyBgRjncp6j2GevSsnTNG8JfDe21DU7eJNPSZF8xBIxEhXcQFBJ55bgV01KcG1N7o8XC4uvCEsPT1U9Gt/6Z598e9QGkadpIhMcjwzFXh3cxxsvyts6YzGACRwRwQa5bwP4/u/D8qXOnvuic5lty3yN7+x9D/wDXFVdZvrvxbqd1dXimWa/kwYlyQOgVFHsAAPp61i+MPAus/DiW31DZ5mmXKqQyNuEbkZMZx1wc89DXBz+3vKno0fT+wWUKNHF2lTqfEuqfc+qPCfjbTfFdl5ttJtlTiWJ8B4z7j0PYjj9a5yDU7XU9e1O61a5i1Ox0+aOO3aG3G2LzSqZEh5+Urlip6uePlAHnvwJubfUr691hnuYIbZFgG4bUd3PfnnGO4xz9K9D8X+AF1mz1CXSpPsl7eJ+8UOyRTuOQzleQcgfMPQZDYArppSlKF5qzPnMypUKVeUcNLmh0f6Hi/jXxbpOuwtZ28ey10+YRJa20AkSJcsCYi2OB1wy4G7jOQB5rc3tpbrPKYF+zyMwSaFysr7iBs2c4XggAqRxg8YIseJv7R8LaxPbXuhYv4JXuJrdYv3SIQ+0hSvzL8xJCsynAz0+XmdR1mKPU2tzKqDzGDl4l2BSckEfNnB/UZ6io5W3dnCaq66+uytFejYA0UEzTEI0WPMwi5OcE8k5HJPB7Vzrkd1EZ4I5ILdjgwiTYrAbEJ7ddz5G7Bz6Ak8ne3c0d5LIrxzGVd4k37gTkHdzznjv81Q/aHN7GAqh/MVnZkB3enyntjt0rT2aA6+DXLS4gna+kaF5EWOJIoVZHAI6HJKlQoxjk8A4ySdW+1C8u7+1YW1vBMxa4jIUKzbgmDlk24LE8DIUKw4HJ5W31KC4tQGWOGfzf3MyKEYMy8hiCAOo5wTnjgc1rXmpTWumKnmxLNMhEzmJhIYnO9c7gSSQQAV6BccA8y4K97AY+pWctldTJfaZcRCKUMXSQOxfupcHgHdy3PIHGapa3fya5cri1gh82XbHHEeF4ChRkkgDA9vpxjVjlWezkNxqUVtLvb/R5Y5Sp24/dMccFtpxg9V5IzmsbUJbdCwWGBkdDlzjcHxnhskEAkdOT+tWvMChYEx3cTMgKlhgMpZWwemO/NFafhHUBb6/ZyyxI0ccgfBAwNvPc8j29+OaKmc2mB9qf8JR4svigsNBtrGN8/vdUu1Z0GMg+VDuB6Yx5gPI96gm8N+IdZkA1vxzqSwn/AJd9HhWxUf8AA8vIfT71SxXjHGDyKtpenjNeo8PbRnN7Yh0r4T+B7N/Ok0G31C5bl7jUGa5eQ+rbyRn8K7W0hgs7dLe1higgQYSOJAqqPQAcCues9SBYAHJrctbhWXk1Lp8vQalcvK20ZNcZO4uvFl5J1CuqD8I1/wAa6e5vo40POfauT0PNxqV3Of455D+G4gfoBUTjZXKi9TuLBNsI+lZfiWYQWrOeigtWzbjbCK5bxzKRp0qjqVx+ZxUUo801HuzSpK0WzJHi1cbQSW+tD+IllXerZ9eelcaYpYxuIIp0ErZYHuK+m+qQ3R4f1mT0ZoXGuzvLvJEgHGMcVnSahdbtwkKn2pYyEDA45GKgkAHTmuiEEuhhKbfUgkZpWLOSzHqTURGOlTlaaVzW6Mmysc+ppCuTzUzIfSlit3mcIiksaAvcihi3OOMjtV6XTiEDAqABk812ui+GYbSFJpgHlKjggECo9Z0WTUR5MNuqjIJk6dO1cLxcXKyOpYaSjdnBsix7iMMSOPaq7IXPIJYmuiufCl8rbUQE/Wr+neDbhF8yYqGA4BrV4mnFXuQqE29jkZLNQiquTIeo9KSSxVOFlUt3HpXo8Gi28alBborOMNgdan034bac99byvOSgcM0ZIy2OcY9KweOgldmn1WT2PM4dIup3SONNzucKvc13+i/CWPUNIjmubiWC7PLKMED2ruJPAemtq8WpRgxNHk7U4DN6muiht44F2oMV52IzVyS9loddHAWfvnnFh8GbSJA09/IZM5UqmMfrVrxL4Q0XTbRZF3m8ICICT8w6EYHHTPNeg1k6x4fh1Z45TI6SRnIweD+FcccbVlNOpLQ6ZYWEY2gjy21tVt/LtktZiivv3c10VhM8kflywmNgeMdCKvX9pNbTmF4+QMgjoRVQkx/eGK654jmVznjS5Wa0EoAGOBVwXWxODXPpeBR1pft+O9cU3c6FobE99lcGqxuwB1rKlvM96rSXuO9Z3KNo3nvTo7/B61zrXx9aaL8rzmpuFzsodVIwM/rVuPVO+a4qLUckZNWRqWBjdmkNM7WHVUkODV6KVZRlTXn8WonOAa39J1ZVX944HsalxLUzpKKzzrloB98H6UqazbPjDHmp5Wac6L9FVxf25/5aCmnU7YH/AFgosx8yLVRvKEbBqsdWt84BqrcXyyMdtVGDIlNdC9JKjoVYBgexHFZdxZzIxkspwuTlopsshGex6rx9R7U9Jie9PM4QZJrRUzNzKMOtRx3CWt/G1jcuSqLKRsl/3H6NnsOG9VFeH/HHW5bPxxFZ312yWr26S20ZYlVByrHHQHKnp2Ir1zxl4v0vRtOZdTsWurCVSsrsqtCnTAkz0B9cEA4rwXx6+h+ONAS/tb+6t/sEk0cdpqKmRY0UbsJcDIwVGQrM3zYRSDgHGtTUouEup2YHGSw9aNeG6Mq7s7bVLbyZQs0G4MVDfKxByM46jPbpXonwwurfV4r3wpq8aXVjcoZI4ZeQrDqF9P73HQrkd68j0f4Va9rkMsvhi7hvZFAYxQ3YSVBx95JNpHUdMjPeu/8AgRZ6nrGuu84MdzohPnpcEiSQsHXHTtznPoPXjzo4adKSlF3R9bic8wuPw9SnWhyya0e+q2Wx7L4e8O6R4Xsm0zSrUW1tvLsrMXMjEAEksSSeB+VfPeu+M9btfGGs2GoavqMBhu5Y483DoojDkJgZwBtx7d+9fQXi7w1D4k0y4sJZFhdgrK7nHltnhvp1HvyM14xP+z7e+J7+C+i8Q6VLGkgjuWt5TONo4I6D5gPXFbVk5+41o+p4uWyjQX1qMlzRfwtaNPzONvdXsvGO6yvdQuNQaBSVczOZIc/xRueh6HA4OBkEV5744+G194CmtJrvz5LC+RZbS+iiIjkRhkA5PD4PKk/n1r2Lxf8ADax8Ba7B/ZlxPc289sC0kpU5cMwbG0ADGF4r2DwtpOlePvhfaaRrVtFd2jRG2kjYHjYxVSD1DAAHI6VnQTpVHSvdWuduZzhi8HHGqCjLmcXbTpdHwbIxRldmjcOCQB9SOQOnr+VSC8fzPNcPJhNh3/N2469eeea7P4pfDK5+GXjKWwkINg2Z7GaU5E8Y5wSAPmB4I9ceoNcZMTdoJ5pZHmZm3scktjGCSeO59/zrtPmyK0heV/kcDb82SeB/n3rR+1XDXEd/fK00I+RUkduVGD5YIJKjB49s1LqLaTb20giF1dXMzbhLOoVceoIJyfvenIHXpWMzN5YAY7c8jdwT9PxP50bgbVxq2l3AmZre5X5maJmO9m5BCucj3Ofzz1FbTrVdQu9gVpokJIRIzuYAjrjpnPXNZbncA3PAwSTnP+RipbeeYh41nKBl6EnDdOOPoOtFgOkuNSuVNvbw28UShwgRps/McqRgnIXjHJxxk9c0Vz0l/I8SxMEIXPO0bjkY5PU+2enbqaKnlA+0be5Oc7qsG8yQNwrHBYDinAsa+1lhIt3Pn1Xa0NdbuSJw6t0q7Br0wGCQK55ZDjFKsjE9ah4RPdAsQ0dG2qyM2N3X1rQ8Kpkb8D5ufzOa5OOZjIMmu28LQCOFFA4G0fkK8bMqapuMT0cHLnuzr4hiJc+lcX46n2xqvXJHFdtjEY+led+OZszRqOx9frXLg481eK8zfFO1Js5WeYyJgjFVanbmmlRjpX1sY2PnXK5FjIpNuKl20bTmqsSyAr7UhWpsUjL0oEQ7BnnmrFnD+/VlbBBqIrmpIWMUgYDp2qZK60HF2Z6PpbmeNAQQMCt+GwDLjAGa4fR9a8iJNzA98ntXV6Z4hjuV+UjPpXz2Iozi3Y9ujUi0WptNVG+4CPWmy6Ydny/lVxbl5j0q/Bbswy2CK5JTcdzdK+xzkWlFCXfk1s6TalH8xlrQFtEGwRk4qURquMDGKynX5lYuNKzuOoopCQK5zcCQO9RzTJbRmRzhR1qC8kWNd24KTwCfWuX1XxJFM4tVk3OODit6VBz2OedZRLOt6il46+QzbQOe1c9eyhuQ3SrIjmuM+UpIHWoZ9OkTl1NdLSiuVGF3J3M4zEd6ja5PrTp4WDGq0kZArFjFe6PPNQtcn3pjLjrUDk9hUDuTNc+9M+1H1qJYnkPSnCyfG49KpQb2J5yRbo54NTx3LmoYrTJAq/HYEEZG0EZyatUWL2gkUr7utX0aTA5NPWyj8tTHtYeoOc0+R4bVCZJFU9lJ5NbRoX0IdQVWkUbjmnpdOOhNVZddsTA8UOZJzwp6AVjPqTxS+WSx2r8x9a6I4FyM3iEjphfSE43mpFuHP8RrEt5t4RvM+XFaCTR4+8PzrGeG5XZGka1zRiuG4BNX4pgQKwftkSJu3rj602PWUEqoGyT6U44aXYbqo6XzwgyTVW91CGKEySuFTpz3rE1HW44APMY8dh3rBvdXF7KxZi0YwUXsK6aOEb1ZjUrpGX8SNZawghhshL9qunSJcxSSxpvJLMwUYyqocLnqwOOK8c/tG60uW2tJba6udMyLxdPK7WZHUNmU4GM4Q8ZTjjgc+v6ykGsvbteoZTbPvjAcjBxjsff/ACM1yfirS7CGCK7e/urZ7ddsEULqpcYG5QNvJIXrkYPQjJzz4vL6qvVb0RpQxVNtQS1ZyWo+MpINZ+0XFvHpGql1fzraSOJ+CUHzbtw+6q4P905AB+X0P4WfFrw94du5o9Zs4Ibu9YLcajbElmcc/vE+pY5TPuM8nwLWLKxu9Qe6kuFVPNJzlwG+bkZbJLfMvJIHXnpnH1SXR7cu1uZ3n3FVDMSqEHG7Pf1rxZSlKV7npRVlZH3r43X/AISn4fajLoE0d7I8Bltnt5M+aVOSgK+u0qR74r5fh1SW60+RrDa0hxmJ2IBIPQ49Oa5TwD8YvEXgS9jC30sSMd7B/njkBBx5id856jDDrzXQ67HN4v1ubW/CdtPFPeg3NxY2n70rISdzoByyHrkdCSDgAE5V6PtY26o9fKcyeCqOT1jJWf6NeaNS5upra3VFO9d4XaCSo3EBiAen6dq9v+C135/he4txw1vdsBj0ZVYH8ya8G0OaK50q90vWZGtdZSZDDJLG6hUAO5WAzyTtI+XPHX19c+Bl0Vu9VtD1eOKUfgWB/wDQhXDSg6VWEZPXU+jx+Ip47A161KLSTi9Ulrs9tyn+0r4LfxN4bOpklDo9u9yJCm4HDLlVxzkruJBGPkBJABNfK2j28+omWBUZrcBWMSyKhcdCAOjMewHJwOOOP0MuoI7mFoplDxsMMp6Gvzz8U2LeFPFus6TKjO1lcyW0bbthwrYRvl9gDXqo+HItamiicW7b3QITHwFOMnAPXjvjJ9Oo4xmdGIA4VQQCByevWlScxFXjA3bSDuAYHOR0PsadFEJfMASRyEypXHGOST7YzTSsALArIAjh2IyewXjPU9+v9M0wAKCAVOeKDIwiEW87ASwHuf8A9QpjAdRnFMAJXt1opKKAPs/b6Uu2pfLpdtffHypEEpQuKl2ijZQAQLl+nYj8xj+teieHY/kX3rg7NP3gGPvED/x4H+lejaDHtRK+YzaV69uyPay9Wp3Nyb5U/CvMPGMm/UFHoDXpl02IzXlniFvO1OX/AGeKzyuN8QvmXj3aizG25pNlWVhyOuKsW1h5z8YOK+nlNLc8FRb2M/ZUrWMyLuddo9zXRW9pHGoaSBGI5AxxmpnsoLjM0hIxyQTxXM8Sr7G6w5zS6fI5CoC5PYCtrTPBclwHa53KAAQorW02Gx83cMA+oNdBdanHaWzNGoYqv3R1NcdfGVPhgjppYWHxSPMbjTkgu5IWJGxiAPWoZbQlgEAJPYda0dTknvtWaTyXDuRhSMVf07S0s3E+oNyR/qwM4rsdXlinLc5VT5pNLYpWfhvUblcRgAAZrpPDeh3tqzieNGiB+Vzxn1Nbel3MbIQqqFx6dqlk1fzmaGCPJB256CvKrYqpO8bHoU6EI2dy9axqpwvIBrSMgjWsjTZ3fhkKnOCCK2BH8vOCa8uto9Ttp+Q6I7xu9afUccZUkk9e3apKwZvHYKMCgkAZPFZd/rlvZuEZxz3zThCUnaJM5qO5YvrD7Wm0Pt/CuN1fw+bG6iaCN5HZsuzfxV1trrdpcpuWRfzpl1exyjG0Edia6qM6lN2toc9WMJq6MTT75bNSksGJW9BxUOsSFnyFwCKfeTRJJvJG+qE119oOOtbSjfVGalbQzZU3ZJJzVb7PuPJxWv5SbTuqjctFANxYDHNTGk27EynYhFihGQKguLRI8kjJ9KibxFboT97GOMCq03iRCPkiOe+a7oYGXVHLLEx7ircxhyCuMVorbq0SmTgNyuK5ma/Ekol2/UVbufEMsygIgHbr0rqeE2sjBYlLdmqURJOJAFB6k0l9rMLRpGkiHbwWzXLyXEsx+ZjTTGyAbgefWtIYJLVszli29EjoF137IpWNssenpVG91Tz3Mp3eZ0yazh05/ClI3HJrpjQitTKVeT0JUuijbwMt6mkkupJODwPSmlR2FO2g9q15EZ87BbqdRhZGA9M08XtxjHmN+dNKg0oUelHKuwuZ9xVmmI/1jfnUouJkbduAPtUYWnbMjvRyoakxxeW5cA5ZjxzUzWTQxkyuiHsueTUSArhlyD60pBbkkk+po5exXN3ItlQT6fb3To88SyMnK7udpyDkD1yBz2q6Fqtqc0lpaNPHHLIUIYiPb0HPIJGRxyBz6Y6ianKotyV0gp3crROfv/h3oOqTifUYZrogk4eQhcEcgBcAevGD71wXibwJ4WsYbhdG/tSS5wS9nAhkV+AwUsynAGAeS3U8c8niPx74ja9RLZpITbl3O1PlAIx+85AICkMpwOW74Brz251rxFbGW4+0XFq8gVnZWKmbG3aSe5HBHTpmvl8biKM/dpQt59T3sNRqx1nK5l6pZmO7eGZVt5EbZ5ODmMDjknkngc45zVnQ9euNBKyWt1IiQyJKjBisiPkfMmDwQR19h9KxHklmlLSOS7ksznJPPUnvULoQeQQRxg9a86x3I9l8WeL/APhJ1tdZv7kQ62oSL7QvC3qjocDhXUYH+0M9CuG7b4U+NU8O3dlrOqKy29013Y3UixsVt1ijimD8A7ic4xjjBNeCaQTe2SROo3xMSkgxnp09+APy969F06+1HUdBsoLmYvFp3mLGdo3FX27gx6sMKo57cdKzlTjJqTWqOqli6tOnKlCVoy3Xc+nofin4Ku7eSeHxLp7qi7mVn2Pj1CMAx/AV8p/Gq20DxR471HxJpmvWq2V9GjxgW85aV0jVDtygXBIHOfX8fVPHukeHotFt/C9lY2qayltLeQXvkgPcMkbAoWHJZsNgeqAYxjHzxbwXN21vaTNcQtJJtdbjcsagABWIxwACw79KrYwSuYYS2hDxzCRpFcAbSAMAndnI69MVNdajbS2qxwWxhcgByGB3dyTx3OMDtjvnNVtQUx3s6spV1chlIxhu/wCuarlSACe/SqJHKUIbdnOPlx657/hmm7jjGTj0pKKYBRTgARnNFAH22FFKI6m8sZpdtfd8x8qQeXR5Zqfb7Uu3HajmAWwTN1GvI+YH9DXo+joQqV5/pa79TjQdVVmP6Y/rXpGkIMfSvk8fPmryZ7+DjakibUW2wMc9q8inu/tOsanEScwzgAEdVKKcj153fka9Y1htsDV40XCeJ5sqFa7t89Opic9/cTKfw9q1yt2rXM8w/h2L44qxFdPFwCMVFt9aNtfSuKe54ak1sWhqEo6Nx6Ukt88gC54B/OoBgDpmkIyeRWfs49ivaS7lu2nlDEw4XPrXReHoHunMlzluMAZ4NcyY/wDRftCMMCYwFfQhFbP5OKu6drc1oNoyT0HtXJWh7SL9mdNKfJJKZ2DeH7ZphIqKJM5LHrSXmgeaOoIPWr2mxXF1CkjEcjOat3CTwxEgbiB0FeK60lK1z0+SLV7GXbaWtrBtUkt/KmwRbJTkdDmsm88WyWkpQwZbuM1T/wCErLEssW011LD1pK7Ri61NaXO4sSiklzk54zWiJFI4YV5ifEVy7583aD70x/E17EMBwy/WsZZfOT3LWMjFHp73CIPvCqN1qyxEBa86Pi27YDJIx71DceKLmRTtx+NVHLJp6kyx8Tvb3Vi0RQNya5TxBG1zAr5O6M547iufbXrpmzuP0qK51ie44ckrjBGa7qOBlTaaOSpi4zVmSrqksSKN5XYeAvFW/wDhLXhiKqztxj5vWueldpGyeajxXe8NB7o4vrElsbEfiCSdyJRye9X474PbF45dzbsEAciuet7C6uWCQW8rk44VTXUaF4Avr+VGupfs0YbMiYO7APT6nH9awrqjTV5OxtRlVm7JXI01GRyfN+UAevWsnWNTaUhU4XGDXpn/AAr/AENRlbeQsFx80jHJ9TzXOaf8Mrg6oTqDo1kCfuOdzccVxUcXhruT0sdVbD17KKW552QScnrRtr0zxL8O7ODT2l0uOXzVOdpYtkV53LA0TsjLhgcEV6mGxNOvG8Dza+HnRdplbbS7Kl2Zq/pOmte3KKY2aPdhjW8moq7MoxcnZFG1tJJ5AEjd+cfKM1oXVjOn7p7eVXHXKGvWdD0iz0+FVhghQHk8c5rXaO3zuKR59cCvEq5taekdD16eXXjrI8Amt3gkKOjIw6hhg0zZXpHjjQra4V7uHaJgOx6j0rgBFg4Ir1cNiFWhzI83EUXSlykKpxzTwlTCBiMhTilEeK6DHYh2dqcExUgSniM0ARBacEqUJS7KAuRhaUJipQntTgtAyILVbUNMTUIijTTRHawDRuQORg5Xo3HqKv7KULmomlJWZUZOLujOvrO1+zyzzWkErBd0hZcbsAgk4BzwWxweteMfEZPE2syXPnx+fFaylIba3tCFaNmwCrfePIGenXHeur+KnjK40O9XTCgltZ7csYwNjFxz9/OdvQYGDyeteL6t4/1XVJbQAJD9ljaGL5AzhTkEbjyfvH0x1HNfN5jiISk6cem57mBoyUVOXUwbm3kgldLiMxvgMA/BIIyMfUEH37VTkkLuTnqc1ZkV7hwoYscZ+dh0A9foP0qKaBIJChZWKnB2nIP0I615CPSRb0i8kiSe2UZ80B07EOvII98bh9SK9a+GV4l/pbSbw0izkMSOmAD0Pua8VV2icOhwQcg16h8LLxRfXkSqFS5iS5UDorKdrgfiR+BFUtwex03xlZtTn86ErtsYI4YxgYIGWJPr8zEV4wLy8uGmCyBdqltoHOB1HTsM/lXuOvaZPqUE0dvC0zeTJIwUZwqguT+QJrw5i2naoxAyoLKVI6oQQRz6gmqmkKLH+JgJtXmvEYMt6ftXH8Jk+Yr9QTj8KycYOD1qaYgLHh9x28jGNpyePftTWYsc7RUFDPutlenbNAHGaeMtxwKQAhS/ykA45P8AT8KYCOuxiOcjqD2oq3p+myak6xxSRiRmChDuLEckkAA5A/P2NFAH24Fo257VLtGaUJ7V9rzHyxEEFSCJdvJ5pwjJ6DNGw+hpNgtBnhphPrt6R92LZGD+p/nXp2lrtFeZeAlE9xfXCnIe6fH0B4r0+w4X8K+Rqy5pyl5n0tKNoJeRQ8RS7LSQ+xNeRa9G9te6VqChdsV0IpWOOEkBj/8AQmT8h6V6n4rkK2cgHcYrz3XoJX0LURCrmYWshi2NtbeFJXB7HIGDXoZfG8Jy9Dhx0rTgixso2U+0kW8tYbkLtEqB8emRnFSbPavdjNNXPFaadiuUpNpFWCnrSGOr5ibiqo/saTHUXuT75iH/AMTTLIlLhX8tXx2YZFWUQHTLlR1W5hY/ikg/pUClkBAPWuajrGUfNm9R2cW+yOxt/FioI4o0AxwcdK6K01GO6i3ZGDXlW5h0NWotWvIV2LMdvoa462Wxl8B1U8fb4jp9e0mB90ggjBJ6gYNclfpHBiJUAI5JFaE3iKeaIK/Xv71kTuZm3GujC0Zw0mZYitCSvEqsx6Cm5b1qUpmjZXoWRxczIOTxTSp6VZEeT0oaPHFPQV2VNlIyVa2e1IY6ZNyp5ee1aGl6O17cRjBKE/MR2qONQrgsMgHpXV+G720jjdGRY2znPrXPiasoQvFHRh4RnL3mbug6csGoDy1PlhPmPv711CxorFlUAnqQOtYEOvWsCrh0B7jNObxZa7tqZY+1fMVoVKkr2PfpThBWN+ishPEdvj58qfSoz4otmkEcfJ96xVCo+ht7aHc2zzXnXxD8OxRSx39rE2ZCRIFXj6+1dnJqm2PdlQCOuawdZ8RwvGYRtk9R6V1YJVadVSijmxbp1IOMjzHyqs21zNbMCjEY7ZqxchZJ3dF2gkkD0qHy6+p0ktT5y7i9C4viHUlYMLhhjoAasjxXqZHM2T6kVlrGM80pSs3QpPeKLWIqLqT3GpXN3kyys2e2eKphOelShKd5fFaRUYqyIlNy3ESR0GAePSmFc1L5dKEp3RN2yIJ7UoSphHSiOlzAQhKUJU4ip3lUuYCDZTglSopLMCpAB4PqMCpFjqOe5drEHl5pwjqYR804R0nIDmvEPg618TRPBf4NtL/rI4o1WRgF+7vPONwRvfYo6DnyLXfg5deHze3Wm6at1bz/ACwxSTK0sAHO5uPb+A55HPXP0II6r31jZXUOL63gmjXJxKgbHr1+n6e1edicHTqJvqd2Hxk6bS6HxtrLy6dPHG9ssEgQb1K/K44xkHqDgHPQ1iXMvmvvKICSSdihR+Q4Fe8fFZfC1250TStEM95EzOWsUUO+1d0n8JII4yx64PXArwzU7Se0mKTWslqRgeXICCOOvPPNfP1afJLlTue7SnzxTtYos2TXa/C69SDWkikYLndj1O4c/qqVxW05HHWtfR7iXRb6zvw6Dy5wJU3fMCGzgrwccZ9PfNQjU+u/hylpKZY5oIZC6lGLICSjcEZ64OK8J/aC8D2XgvWdOOmxobeeFi0m7OW8xxg+42kZ9hnmvYfAd0bfVRGT14/z+tYH7Vej/adD0S/gYlo55UaPt8+1gfzDf99H0NORMT5pZYpLg5kEKnnJycce35UkkezYCUbK7gV9Pf3qJNjSfvCwBzyo5zUkkaq7LG5Zc4DEYzSKI2GQNtNbjjGKcy7c7WOP508xHA3cGkAyGaSGQPGxVx0I6iigoV780UAfeZeF+sYQ+qHH6H+mKbEyOpaOQHHZhtJ+nUfrRRXj4LPcZSko83MvPX/gnu4vIsHUi5qPK/LT/gE290xkcdj2P0pJbtII3nlH7uNS7fQcmiivvqNR1KSm97HwNWmoVHBbXK3wyhePRbcyD52G5vr3r0204jP5UUV86fQo57xS3mBIiQNzqMntyKy4tOiYZMq59D3oor08C2qbseXjleaMLwdYSW2mz6U+TJpU7Wx3HJZD88bfQoy/ka2mts9hRRXTQqPlt2OetFc1yF7XH8JqFocdaKK7ITbOOcUSwR5sr4ejW5/9G/41VMZ70UVNB6y9f0Qq20fT9WMMdNMdFFdKbMBDHSNHmiiqTEIYqTys0UU7sQoQgECjyqKKLjEMIHrTfK9qKKabJYnln0pQGT7pIz6UUUXuCdg+djySasWNw1nN5nX2NFFKUU1ZlRm07o1ZPECyKB9nG4d6oT6hLI+5Rt+lFFYxoQjsjSWJqS0bI3vbqRSpkbb6VXKsTk5oorVJLZGTnJ7sQxk9qTyjRRVXZIeV3pwi9qKKV2Aohp6QGQ4VSx9AM0UVhWqyhG6NIRUnZluPRr6UZSznI9ShA/WrMfhfVH5+y7Qe7Oo/rRRXyOO4ixNF2gl9z/zPaw+WUqivJv8Ar5Fe70qayBLmJ9pAYRvuKZ6Z9M84+hquEoor28mx1XF4f2tXe/Q4cww0KFXkhsOCe1T2di95OsScE9zRRXo1ZuMW0ctKKlNJm3e+EHt4g8Um+QjO0+nf+YrJm024thmSPA9uaKK83CYqpLSR6eJwtNK6IdlPEJPQE/hRRXoyk0jzoxuIEp2yiii4jC8R+GpNXjDWH2K1vDwbySLdLGvA+Q9jgdfYexHB+JPCvgrwrp5+1aH/AGre/JHJeSkufNbIyw3gryw4XpweoySivPxcIxi5pano4OcpSUG9DxHVdAuvFWsz6jDbrZQ3M7YcgmMtuA2rxljg5yfvc8kjnltQ06ezuJY7mRBKo3EFsljn+feiivFaPaTPob4fasLqx0m9DfejjDH1YABv1BrrPjnYXuq+Ar2W3+eG3tPNYEZUbZFZieP7gbvRRQwW58hLy/JwDxxTdxB9aKKRRYtbdpiqErCrKzLI4ODgE4yB7Y+ppjAjhTle2TiiigRETk8miiihAf/Z" alt="瓦斯行門口">
+            <p class="about-text" id="about-text"></p>
+            <div class="fact"><span>服務範圍</span><span id="about-range"></span></div>
             <div class="fact"><span>鋼瓶規格</span><span>20 / 16 / 10 / 4 公斤</span></div>
-            <div class="fact"><span>押金規範</span><button class="link-btn" style="font-size:14px" onclick="openSheet('vendor')">查看說明</button></div>
+            <div class="fact"><span>押金規範</span><button class="link-btn" style="font-size:14px" onclick="openSheet('rules')">查看說明</button></div>
           </div>
         </div>
       </div>
@@ -891,6 +1030,7 @@
       <div class="tier">一般家戶</div>
 
       <div class="menu">
+        <button class="menu-item" onclick="openSheet('vendors')"><span data-ico="store"></span>我的瓦斯行<span class="r num" id="acct-vendor"></span></button>
         <button class="menu-item" onclick="openSheet('contact')"><span data-ico="phoneLg"></span>聯絡我們</button>
         <button class="menu-item" onclick="go('addresses')"><span data-ico="target"></span>我的配送地址</button>
         <button class="menu-item" onclick="go('deposit')"><span data-ico="cylinderLg"></span>瓦斯租賃與押金紀錄</button>
@@ -909,13 +1049,13 @@
       </div>
       <div class="cols">
         <div>
-          <h3 class="h-section">目前租賃鋼瓶</h3>
+          <h3 class="h-section">目前租賃鋼瓶 <span class="h-note" id="rent-vendor"></span></h3>
           <div id="rent-list"></div>
         </div>
         <div>
-          <h3 class="h-section">押金紀錄（可退押金）</h3>
+          <h3 class="h-section">押金紀錄</h3>
           <div id="deposit-list"></div>
-          <p class="foot-note">鋼瓶為瓦斯行出資送驗的資產，押金於退還鋼瓶後全額退還。押金金額依瓦斯行公告為準。</p>
+          <p class="foot-note">鋼瓶為瓦斯行出資送驗的資產，押金於退還鋼瓶後全額退還。鋼瓶編號與保證金收據編號請依門市開立的收據填寫，退瓶時需出示收據。</p>
         </div>
       </div>
     </div>
@@ -995,7 +1135,7 @@
     <div class="picker-hint">請拖曳地圖找到您的位置</div>
     <div class="picker-sheet">
       <div class="grabber"></div>
-      <div class="k">配送地址</div>
+      <div class="k k-row">配送地址<button class="locate-btn" id="locate-btn" onclick="locateMe()"><span data-ico="target"></span>使用目前位置</button></div>
       <textarea class="addr-input" id="picker-addr" rows="2" placeholder="輸入地址"></textarea>
       <div class="addr-meta"><span></span><span class="num" id="picker-coords"></span></div>
       <button class="white-btn" onclick="confirmPicker()">確認地址</button>
@@ -1017,15 +1157,39 @@
   /* =========================================================
      資料
      ========================================================= */
-  const STORE_NAME = '逢欣瓦斯・臺東';
-  const OPEN = 8 * 60 + 30, CLOSE = 20 * 60;
+  /* =========================================================
+     瓦斯行清單（請依實際資料填寫）
+     phone：門市電話，例如 '089-123456'；留空則不顯示撥號按鈕
+     line ：LINE 官方帳號網址，例如 'https://lin.ee/xxxxxxx'；留空則不顯示
+     除了逢欣瓦斯，其餘為示意用的瓦斯行，請換成實際合作的店家
+     ========================================================= */
+  const VENDORS = [
+    { id: 'fengxin', name: '逢欣瓦斯・臺東', brand: '逢欣瓦斯 • 臺東', company: '逢欣實業有限公司',
+      area: '臺東市全區', range: '中華路・更生路・新生路・大同路生活圈', hours: ['08:30', '20:00'], phone: '', line: '',
+      driver: { name: '曾柏翰', exp: '擁有 11 年服務經驗' }, photo: true,
+      about: '深耕臺東的在地瓦斯行。巡迴配送車清晨即在加氣站裝滿檢驗合格鋼瓶出發，接單後直接從市區巡迴前往，免去回店裝車的等待。' },
+    { id: 'dongsheng', name: '東昇瓦斯行', brand: '東昇瓦斯 • 臺東', company: '東昇瓦斯行',
+      area: '臺東市・馬蘭、豐里', range: '馬蘭・豐里・豐榮生活圈', hours: ['08:00', '19:00'], phone: '', line: '',
+      about: '服務馬蘭、豐里一帶的家庭與店家，提供桶裝瓦斯配送與爐具檢修。' },
+    { id: 'heping', name: '和平瓦斯行', brand: '和平瓦斯 • 臺東', company: '和平瓦斯行',
+      area: '臺東市・中華路、四維路', range: '中華路・四維路・鐵花村周邊', hours: ['07:30', '19:30'], phone: '', line: '',
+      about: '位於市中心，提供餐飲業大量叫氣與定期配送。' },
+    { id: 'zhiben', name: '知本瓦斯', brand: '知本瓦斯 • 臺東', company: '知本瓦斯行',
+      area: '臺東市・知本、建和', range: '知本・建和・溫泉區', hours: ['08:00', '18:00'], phone: '', line: '',
+      about: '服務知本溫泉區民宿、飯店與住家，提供熱水器檢修。' }
+  ];
+  let STORE = VENDORS[0];
+  const vendorById = id => VENDORS.find(v => v.id === id) || VENDORS[0];
+  const hoursText = v => `${v.hours[0]} ~ ${v.hours[1]}`;
+  const toMin = s => { const [h, m] = s.split(':'); return +h * 60 + +m; };
+  const driverOf = v => v.driver || { name: `${v.name.replace(/・.*$/, '')} 配送師傅`, exp: '出發前會與您聯繫' };
   const PRODUCTS = [
     { id: 'g20', kg: 20, price: 825, grad: 'linear-gradient(100deg,#163A1E 0%,#2F6B3A 42%,#7D847F 100%)' },
     { id: 'g16', kg: 16, price: 700, grad: 'linear-gradient(100deg,#172E47 0%,#2C5C8C 42%,#7E848B 100%)' },
     { id: 'g10', kg: 10, price: 425, grad: 'linear-gradient(100deg,#3B2C12 0%,#8A6A22 42%,#86827A 100%)' },
     { id: 'g4',  kg: 4,  price: 235, grad: 'linear-gradient(100deg,#0F5A52 0%,#1F9C8C 42%,#828A89 100%)' }
   ];
-  const DEPOSIT = { 20: 1500, 16: 1300, 10: 1000, 4: 600 };   // 鋼瓶押金（展示用數值）
+  const DEPOSIT = { 20: 1800, 16: 1500, 10: 1000, 4: 800 };   // 每支鋼瓶押金
   const SERVICES = [
     { t: '瓦斯爐具檢修', d: '點不著、黃火積碳、爐頭漏氣' },
     { t: '熱水器檢修', d: '忽冷忽熱、空燒異常、無法點火' },
@@ -1033,11 +1197,7 @@
     { t: '疑似微量瓦斯外洩緊急全室安檢', d: '以氣體測漏儀全室管閥查驗', urgent: true }
   ];
   const PAYMENTS = [{ id: '現金支付', desc: '貨到交付司機' }, { id: 'LINE Pay', desc: '下單即完成付款' }];
-  const DEMO = { name: '林同學 (評分測試)', phone: '0988-123-456', address: '臺東市豐榮路90巷26號, 臺東縣', addrType: '住家', lat: 22.7493928, lng: 121.1385560, carrier: '/GOGAS88' };
-  const DEFAULT_LOC = [22.7493928, 121.1385560];
-  const DRIVER_START = [22.7556, 121.1520];
-  const TRIP_MS = 30000;   // 展示用：30 秒跑完整趟配送
-  const ETA_MIN = 8;
+  const DEFAULT_LOC = [22.7556, 121.1468];   // 臺東市區，使用者尚未標記位置時的地圖中心
   /* 免金鑰地圖圖磚：依序嘗試，前一個載入失敗就自動換下一個 */
   const TILE_SOURCES = [
     { name: 'esri', cls: 'tint', maxNative: 16,
@@ -1120,19 +1280,20 @@
   /* =========================================================
      狀態（存入 localStorage）
      ========================================================= */
-  const KEY = 'fengxin_gas_v2';
+  const KEY = 'gogas_taitung_v3';
   const blankStore = () => ({
-    profile: { name: '', phone: '', address: '', addrType: '住家', lat: DEFAULT_LOC[0], lng: DEFAULT_LOC[1], payment: '現金支付', carrier: '', avatar: '' },
-    active: null, history: [], rentals: [], repair: null
+    profile: { name: '', phone: '', address: '', addrType: '住家', lat: DEFAULT_LOC[0], lng: DEFAULT_LOC[1], payment: '現金支付', carrier: '', avatar: '', located: false },
+    registered: false, vendorId: null, contracts: {}, active: null, history: [], rentals: [], repair: null
   });
   let store = blankStore();
+  let regVendor = null;
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
     if (saved) store = { ...store, ...saved, profile: { ...store.profile, ...(saved.profile || {}) } };
   } catch (e) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { toast('瀏覽器儲存空間不足，部分資料未儲存', true); } };
 
-  const draft = { qty: { g20: 1, g16: 0, g10: 0, g4: 0 }, elevator: true, floor: 3, date: '', time: '', payment: store.profile.payment, invoice: 'carrier', invoiceVal: store.profile.carrier };
+  const draft = { touched: false, qty: { g20: 1, g16: 0, g10: 0, g4: 0 }, elevator: true, floor: 3, date: '', time: '', payment: store.profile.payment, invoice: 'carrier', invoiceVal: store.profile.carrier };
   const repairDraft = { items: [0], desc: '', date: '', time: '' };
   let confirmMode = 'gas';
   let current = 'home';
@@ -1188,6 +1349,8 @@
     person: `<svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect width="64" height="64" fill="#2a2a2a"/><circle cx="32" cy="25" r="11" fill="#d9d9d9"/><path d="M10 62c2-13 11-20 22-20s20 7 22 20" fill="#d9d9d9"/></svg>`,
     cash: `<svg width="40" height="26" viewBox="0 0 40 26" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="23" rx="3" fill="#fff" stroke="#2E9B50" stroke-width="3"/><rect x="6" y="6" width="28" height="14" rx="2" fill="none" stroke="#2E9B50" stroke-width="2"/><circle cx="20" cy="13" r="5" fill="#2E9B50"/></svg>`,
     linepay: `<svg width="40" height="26" viewBox="0 0 40 26" aria-hidden="true"><rect width="40" height="26" rx="6" fill="#06C755"/><text x="20" y="17.5" text-anchor="middle" font-size="11" font-weight="900" fill="#fff" font-family="Arial, sans-serif">LINE</text></svg>`,
+    store: S(34, 34, '<path d="M3 9.5 5 4h14l2 5.5"/><path d="M3 9.5c0 1.5 1.3 2.5 3 2.5s3-1 3-2.5c0 1.5 1.3 2.5 3 2.5s3-1 3-2.5c0 1.5 1.3 2.5 3 2.5s3-1 3-2.5"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/>', 'stroke-width="1.8"'),
+    flameLg: `<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.6 3.2 2.6 5 4.3 6.9C18 10.8 19 12.8 19 15a7 7 0 1 1-14 0c0-2.3 1.1-4.1 2.5-5.5.3 1.6 1.1 2.8 2.3 3.4C9.5 9 10.4 5.3 12 2Z" fill="#fff"/></svg>`,
     mapDot: `<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="12" fill="none" stroke="#fff" stroke-width="3"/><circle cx="17" cy="17" r="6" fill="#111" stroke="#fff" stroke-width="2"/><path d="M17 1v6M17 27v6M1 17h6M27 17h6" stroke="#fff" stroke-width="3"/></svg>`
   };
   const ADDR_ICO = { 住家: 'home', 公司: 'building', 其他: 'pin' };
@@ -1201,8 +1364,16 @@
   };
   const TABS = [['home', '首頁'], ['history', '訂單'], ['service', '服務'], ['account', '帳戶']];
 
-  function barcodeSVG(w, h) {
-    const p = [3,1,1,2,1,3,2,1,1,1,3,2,1,2,1,1,2,3,1,1,2,1,1,3,1,2,2,1,1,1,3,1,2,1,1,2,3,1,1,2,1,1,2,1,3,2,1,1,2,1,1,3,1,1,2,2,1,1,3,1];
+  function barcodePattern(seed) {
+    if (!seed || seed === 'fengxin') return [3,1,1,2,1,3,2,1,1,1,3,2,1,2,1,1,2,3,1,1,2,1,1,3,1,2,2,1,1,1,3,1,2,1,1,2,3,1,1,2,1,1,2,1,3,2,1,1,2,1,1,3,1,1,2,2,1,1,3,1];
+    let h = 2166136261;
+    for (const ch of seed) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+    const out = [];
+    for (let i = 0; i < 60; i++) { h = Math.imul(h ^ (h >>> 13), 1274126177); out.push(1 + ((h >>> 0) % 3)); }
+    return out;
+  }
+  function barcodeSVG(w, h, seed) {
+    const p = barcodePattern(seed);
     const total = p.reduce((a, b) => a + b, 0), u = w / total;
     let x = 0, out = '';
     p.forEach((n, i) => { if (i % 2 === 0) out += `<rect x="${(x * u).toFixed(2)}" y="0" width="${(n * u).toFixed(2)}" height="${h}" fill="#fff"/>`; x += n; });
@@ -1271,7 +1442,7 @@
      導覽
      ========================================================= */
   const SCREEN_TAB = { home: 'home', order: 'home', confirm: 'home', track: 'history', history: 'history', repair: 'service', 'repair-done': 'service', service: 'service', account: 'account', deposit: 'account', addresses: 'account', payments: 'account' };
-  const NO_TABBAR = ['confirm'];
+  const NO_TABBAR = ['confirm', 'contract', 'register'];
   const RENDER = {};
 
   function buildNav() {
@@ -1279,6 +1450,8 @@
     $('side-nav').innerHTML = TABS.map(([k, l]) => `<button class="side-item" data-tab="${k}" onclick="go('${k}')">${TAB_ICONS[k]}${k === 'history' ? '訂單紀錄' : l}</button>`).join('');
   }
   function go(screen) {
+    if (!store.registered) screen = 'register';
+    $('app').classList.toggle('onboarding', screen === 'register');
     if (screen !== current) prevScreen = current;
     current = screen;
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -1290,7 +1463,64 @@
     closeDD();
     (RENDER[screen] || (() => {}))();
   }
-  function history_back() { go(['order', 'repair', 'confirm'].includes(prevScreen) ? 'home' : prevScreen); }
+  function history_back() { go(['order', 'repair', 'confirm', 'contract', 'register'].includes(prevScreen) ? 'home' : prevScreen); }
+
+  /* =========================================================
+     瓦斯行：套用目前瓦斯行到畫面
+     ========================================================= */
+  function applyVendor() {
+    STORE = vendorById(store.vendorId);
+    document.querySelectorAll('.barcode').forEach(el => { if (!el.dataset.fixed) el.innerHTML = barcodeSVG(+el.dataset.w, +el.dataset.h, STORE.id); });
+    document.querySelectorAll('.brand-text').forEach(el => { if (!el.dataset.fixed) el.textContent = STORE.brand; });
+    $('side-hours').textContent = hoursText(STORE);
+    syncStoreCalls();
+  }
+  const vendorLogo = (v, w = 64) => `<span class="v-logo"><span class="barcode" data-fixed="1">${barcodeSVG(w, 18, v.id)}</span><span class="bt">${esc(v.brand)}</span></span>`;
+  const myRentals = (vid = STORE.id) => store.rentals.filter(r => r.vendorId === vid && (r.status === 'renting' || r.status === 'returning'));
+  const ownedCount = kg => store.rentals.filter(r => r.vendorId === STORE.id && r.status === 'renting' && r.kg === kg).length;
+  const hasContract = (vid = STORE.id) => !!(store.contracts[vid] && store.contracts[vid].status === 'active');
+  const depositSum = rs => rs.reduce((a, r) => a + r.deposit, 0);
+
+  /* =========================================================
+     註冊
+     ========================================================= */
+  RENDER.register = function () {
+    fillProfileInputs();
+    regStep(regVendor ? 2 : 1, true);
+  };
+  function regStep(n, silent) {
+    $('reg-1').classList.toggle('hidden', n !== 1);
+    $('reg-2').classList.toggle('hidden', n !== 2);
+    $('rs-1').classList.toggle('on', true);
+    $('rs-2').classList.toggle('on', n === 2);
+    if (n === 2) renderRegVendors();
+    if (!silent) $('s-register').scrollTop = 0;
+  }
+  function regNext() {
+    const p = store.profile;
+    if (!p.name.trim()) return flag('g-name-row', '請填寫姓名');
+    if (!/^09\d{2}-?\d{3}-?\d{3}$/.test(p.phone.trim())) return flag('g-phone-row', '請填寫正確的手機號碼');
+    if (!p.address.trim()) return flag('g-addr-card', '請填寫配送地址');
+    if (!$('g-agree').checked) return toast('請勾選同意資料使用說明', true);
+    regStep(2);
+  }
+  function renderRegVendors() {
+    $('reg-vendors').innerHTML = VENDORS.map(v => `
+      <button class="v-pick ${regVendor === v.id ? 'on' : ''}" onclick="regVendor = '${v.id}'; renderRegVendors()">
+        ${vendorLogo(v)}
+        <div style="min-width:0"><div class="nm">${esc(v.name)}</div><div class="d">${esc(v.area)}・營業 ${hoursText(v)}</div></div>
+        <span class="dot"></span>
+      </button>`).join('');
+  }
+  function regFinish() {
+    if (!regVendor) return toast('請選擇一間瓦斯行', true);
+    store.vendorId = regVendor;
+    store.registered = true;
+    save();
+    applyVendor();
+    toast(`註冊完成，歡迎使用 ${STORE.name}`);
+    go('home');
+  }
   function startOrder() {
     if (store.active) { toast('目前已有配送中的訂單'); return go('track'); }
     go('order');
@@ -1299,7 +1529,7 @@
   /* =========================================================
      共用：個人資料
      ========================================================= */
-  const FIELD_IDS = { name: ['o-name', 'r-name', 's-name'], phone: ['o-phone', 'r-phone', 's-phone'], address: ['o-address', 'r-address', 'a-address'], carrier: ['carrier-input'] };
+  const FIELD_IDS = { name: ['o-name', 'r-name', 's-name', 'g-name'], phone: ['o-phone', 'r-phone', 's-phone', 'g-phone'], address: ['o-address', 'r-address', 'a-address', 'g-address'], carrier: ['carrier-input'] };
   function setProfile(key, val) {
     store.profile[key] = val;
     save();
@@ -1309,7 +1539,7 @@
     Object.entries(FIELD_IDS).forEach(([k, ids]) => ids.forEach(id => { const el = $(id); if (el) el.value = store.profile[k] || ''; }));
     document.querySelectorAll('.addr-type').forEach(s => s.value = store.profile.addrType);
     syncAddrType();
-    document.querySelectorAll('.coords').forEach(el => el.textContent = `(${(+store.profile.lat).toFixed(7)}, ${(+store.profile.lng).toFixed(7)})`);
+    document.querySelectorAll('.coords').forEach(el => el.textContent = store.profile.located ? `(${(+store.profile.lat).toFixed(7)}, ${(+store.profile.lng).toFixed(7)})` : '尚未標記地圖位置');
   }
   function setAddrType(v) { store.profile.addrType = v; save(); syncAddrType(); document.querySelectorAll('.addr-type').forEach(s => s.value = v); }
   function syncAddrType() {
@@ -1318,33 +1548,8 @@
     document.querySelectorAll('.addr-type-ico').forEach(el => el.innerHTML = ICON[ADDR_ICO[v]]);
   }
 
-  function demoOrder(when, items, no) {
-    const its = items.map(([kg, qty]) => ({ kg, qty, price: PRODUCTS.find(p => p.kg === kg).price }));
-    const subtotal = its.reduce((a, i) => a + i.qty * i.price, 0);
-    const ts = new Date(when).getTime();
-    return { no, createdAt: ts, completedAt: ts, items: its, subtotal, count: its.reduce((a, i) => a + i.qty, 0), floorFee: 0, deposit: 0, total: subtotal,
-      elevator: true, floor: 1, address: DEMO.address, addrType: '住家', name: DEMO.name, phone: DEMO.phone, lat: DEMO.lat, lng: DEMO.lng,
-      date: when.slice(0, 10), time: when.slice(11, 16), payment: '現金支付', invoice: '手機載具 (GOGAS88)', tip: 0 };
-  }
-  function fillDemo() {
-    Object.assign(store.profile, DEMO);
-    draft.invoiceVal = DEMO.carrier;
-    if (!store.history.length) store.history = [
-      demoOrder('2026-02-02T14:30', [[20, 2]], 'FX260202'),
-      demoOrder('2026-01-19T09:30', [[20, 2]], 'FX260119'),
-      demoOrder('2025-12-17T14:30', [[20, 2], [4, 1]], 'FX251217')
-    ];
-    if (!store.rentals.length) store.rentals = [
-      { serial: 'BO10014329', kg: 20, start: '2026-01-04', deposit: DEPOSIT[20], receipt: 'D1150104-01', status: 'renting' },
-      { serial: 'AV21566919', kg: 20, start: '2024-01-04', deposit: DEPOSIT[20], receipt: 'D1130104-07', status: 'renting' }
-    ];
-    save();
-    (RENDER[current] || (() => {}))();
-    if (current === 'order') initMini('mini-map', 'mini');
-    toast('已載入展示資料');
-  }
   function resetAll() {
-    try { localStorage.removeItem(KEY); localStorage.removeItem('fengxin_gas_v1'); } catch (e) {}
+    try { localStorage.removeItem(KEY); } catch (e) {}
     location.reload();
   }
 
@@ -1357,7 +1562,7 @@
     $('home-addr').textContent = store.profile.address || '輸入您的配送地址';
     $('home-addr').style.color = store.profile.address ? '#9C9C9C' : '#6B6B6B';
     $('home-status').innerHTML = statusCardHTML('h');
-    if (store.active) { buildProg($('h-prog')); tick(true); }
+    if (store.active) { buildProg($('h-prog')); tick(); }
     const l = store.history[0];
     $('home-last').innerHTML = l ? histRowHTML(l, 0) : `<div class="card empty-card"><p>還沒有訂單紀錄，叫第一桶瓦斯吧！</p></div>`;
   };
@@ -1365,7 +1570,7 @@
     if (!store.active) return `
       <div class="status-card idle">
         <div class="st-title" style="font-size:22px">目前沒有進行中的訂單</div>
-        <div class="st-line" style="color:var(--muted); font-size:15px">巡迴車在市區待命中，最快 8 分鐘送達</div>
+        <div class="st-line" style="color:var(--muted); font-size:15px">選好時間，師傅依約送到府上</div>
         <div style="text-align:right; margin-top:18px"><button class="outline-btn" onclick="startOrder()">叫瓦斯</button></div>
       </div>`;
     return `
@@ -1406,7 +1611,7 @@
       </div>`;
     $('hist-active').innerHTML = top;
     $('hist-active').style.display = top ? '' : 'none';
-    if (store.active) { buildProg($('hh-prog')); tick(true); }
+    if (store.active) { buildProg($('hh-prog')); tick(); }
 
     const h = store.history;
     if (!h.length) {
@@ -1436,29 +1641,38 @@
   /* =========================================================
      叫瓦斯表單
      ========================================================= */
-  const activeRentals = () => store.rentals.filter(r => r.status !== 'returned');
   function calc() {
     let subtotal = 0, count = 0, deposit = 0;
-    PRODUCTS.forEach(p => { subtotal += draft.qty[p.id] * p.price; count += draft.qty[p.id]; });
+    const newCyl = {};
+    PRODUCTS.forEach(p => {
+      const q = draft.qty[p.id], n = Math.max(0, q - ownedCount(p.kg));
+      subtotal += q * p.price; count += q;
+      if (n) { newCyl[p.kg] = n; deposit += n * DEPOSIT[p.kg]; }
+    });
     const floorFee = (!draft.elevator && draft.floor > 1 && count) ? (draft.floor - 1) * 20 * count : 0;
-    // 首次合作（尚無租賃鋼瓶）需壓存鋼瓶押金
-    if (!activeRentals().length) PRODUCTS.forEach(p => deposit += draft.qty[p.id] * DEPOSIT[p.kg]);
-    return { subtotal, count, floorFee, deposit, total: subtotal + floorFee + deposit };
+    return { subtotal, count, floorFee, deposit, newCyl, total: subtotal + floorFee + deposit };
   }
+  const needsContract = () => calc().deposit > 0 && !hasContract();
 
   RENDER.order = function () {
     fillProfileInputs();
     $('prod-list').innerHTML = PRODUCTS.map(p => `
       <div class="prod" id="prod-${p.id}" style="background:${p.grad}">
         <div class="prod-img">${cylinderSVG(p.kg)}</div>
-        <div class="prod-kg"><b class="num">${p.kg}</b><sub>公斤</sub><span class="p num">NT$ ${p.price} / 桶</span></div>
+        <div class="prod-kg"><b class="num">${p.kg}</b><sub>公斤</sub><span class="p num">NT$ ${p.price} / 桶${ownedCount(p.kg) ? `・已租 ${ownedCount(p.kg)} 支` : '<span class="need">需付押金</span>'}</span><span class="dep-line num" id="dep-${p.id}"></span></div>
         <div class="qty">
           <button onclick="updateQty('${p.id}',-1)" id="minus-${p.id}" aria-label="減少 ${p.kg} 公斤"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></button>
           <span class="n num" id="qty-${p.id}"></span>
           <button onclick="updateQty('${p.id}',1)" aria-label="增加 ${p.kg} 公斤"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6h8M6 2v8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></button>
         </div>
       </div>`).join('');
+    if (!draft.touched) PRODUCTS.forEach(p => draft.qty[p.id] = ownedCount(p.kg));
+    if (!draft.touched && !PRODUCTS.some(p => draft.qty[p.id])) draft.qty.g20 = 1;
     PRODUCTS.forEach(p => syncQty(p.id));
+    const owned = PRODUCTS.filter(p => ownedCount(p.kg));
+    $('dep-hint').innerHTML = owned.length
+      ? `已在 ${esc(STORE.name)} 租用的規格以空瓶交換；其他規格或超過租用數量，每支需加付鋼瓶押金。`
+      : `第一次向 <b>${esc(STORE.name)}</b> 叫瓦斯，每支鋼瓶需支付押金（20kg $${DEPOSIT[20].toLocaleString()}・16kg $${DEPOSIT[16].toLocaleString()}・10kg $${DEPOSIT[10].toLocaleString()}・4kg $${DEPOSIT[4]}），並簽署租用契約。`;
     $('floor-chips').innerHTML = [1, 2, 3, 4, 5, 6].map(f => `<button class="floor-chip num" data-f="${f}" onclick="setFloor(${f})">${f === 6 ? '6F+' : f + 'F'}</button>`).join('');
     setElevator(draft.elevator);
     if (!draft.date) setToday();
@@ -1475,6 +1689,7 @@
     const n = draft.qty[id] + d;
     if (n < 0 || n > 20) return;
     draft.qty[id] = n;
+    draft.touched = true;
     syncQty(id, true);
   }
   function syncQty(id, anim) {
@@ -1482,6 +1697,8 @@
     el.textContent = draft.qty[id];
     $('prod-' + id).classList.toggle('zero', draft.qty[id] === 0);
     $('minus-' + id).disabled = draft.qty[id] === 0;
+    const kg = PRODUCTS.find(p => p.id === id).kg, extra = Math.max(0, draft.qty[id] - ownedCount(kg));
+    $('dep-' + id).textContent = extra ? `+ 押金 ${extra} 支 ${money(extra * DEPOSIT[kg])}` : '';
     if (anim) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
     updateTotals();
   }
@@ -1504,7 +1721,7 @@
     const c = calc();
     $('o-total').textContent = money(c.total);
     $('o-total-sub').innerHTML = `共 ${c.count} 桶・瓦斯 ${money(c.subtotal)}・樓層費 ${money(c.floorFee)}` +
-      (c.deposit ? `<br>首次合作鋼瓶押金 ${money(c.deposit)}（可退）` : '');
+      (c.deposit ? `<br>鋼瓶押金 ${money(c.deposit)}（退瓶可退）` : '');
     $('fee-note').innerHTML = draft.floor <= 1 ? '1 樓免收樓層費'
       : `樓層費 = (${draft.floor} − 1) 層 × $20 × ${c.count} 桶 = <b>${money(c.floorFee)}</b>`;
   }
@@ -1584,7 +1801,6 @@
     MAP_PROVIDER = 'leaflet';
     mapsReady = Promise.resolve(false);
     Object.keys(maps).forEach(k => delete maps[k]);
-    trackTruck = null;
     (RENDER[current] || (() => {}))();
     if ($('picker').classList.contains('show')) openPicker();
     toast(msg, true);
@@ -1660,18 +1876,19 @@
   function previewMap(lat, lng, cls = '', z = 17, W = 640, H = 300) {
     return useEmbed() ? `<div class="smap ${cls}">${gEmbed(lat, lng, z)}</div>` : staticMap(lat, lng, cls, z, W, H);
   }
-  async function initMini(elId, key) {
+  async function initMini(elId, key, pos) {
     await mapsReady;
+    const c = pos || [store.profile.lat, store.profile.lng];
     if (useEmbed()) {
-      const el = $(elId), ll = `${store.profile.lat},${store.profile.lng}`;
+      const el = $(elId), ll = `${c[0]},${c[1]}`;
       el.classList.remove('tint', 'tint-inv');
       el.parentElement.classList.add('embed');
-      if (el.dataset.ll !== ll) { el.innerHTML = gEmbed(store.profile.lat, store.profile.lng, 17); el.dataset.ll = ll; }
+      if (el.dataset.ll !== ll) { el.innerHTML = gEmbed(c[0], c[1], 17); el.dataset.ll = ll; }
       return;
     }
     if (!maps[key]) maps[key] = mkMap(elId, 'none');
     mapResize(maps[key]);
-    mapSetView(maps[key], [store.profile.lat, store.profile.lng], 16);
+    mapSetView(maps[key], c, 16);
   }
   function openPicker() {
     $('picker').classList.add('show');
@@ -1691,12 +1908,34 @@
     $('picker').classList.remove('show');
     $('tabbar').classList.toggle('hide', NO_TABBAR.includes(current));
   }
+  /* 目前位置：瀏覽器定位 + OpenStreetMap 反查地址（不需要金鑰） */
+  function locateMe() {
+    if (!navigator.geolocation) return toast('這個瀏覽器不支援定位', true);
+    const btn = $('locate-btn');
+    btn.disabled = true;
+    navigator.geolocation.getCurrentPosition(async pos => {
+      const c = [pos.coords.latitude, pos.coords.longitude];
+      if (maps.picker) mapSetView(maps.picker, c, 18);
+      try {
+        const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${c[0]}&lon=${c[1]}&accept-language=zh-TW&zoom=18`);
+        const j = await r.json(), a = j.address || {};
+        const parts = [a.city || a.county, a.town || a.suburb || a.city_district, a.road, a.house_number ? a.house_number.replace(/號?$/, '號') : ''];
+        const addr = parts.filter(Boolean).join('') || j.display_name;
+        if (addr) $('picker-addr').value = addr;
+      } catch (e) { toast('已定位，請手動輸入地址'); }
+      btn.disabled = false;
+    }, err => {
+      btn.disabled = false;
+      toast(err.code === 1 ? '請允許瀏覽器使用您的位置' : '無法取得目前位置，請拖曳地圖', true);
+    }, { enableHighAccuracy: true, timeout: 10000 });
+  }
   function confirmPicker() {
-    if (maps.picker) { const c = mapCenter(maps.picker); store.profile.lat = c[0]; store.profile.lng = c[1]; }
+    if (maps.picker) { const c = mapCenter(maps.picker); store.profile.lat = c[0]; store.profile.lng = c[1]; store.profile.located = true; }
     setProfile('address', $('picker-addr').value.trim());
     save(); fillProfileInputs(); closePicker();
     if (current === 'order') initMini('mini-map', 'mini');
     if (current === 'addresses') initMini('addr-map', 'addr');
+    if (current === 'register') fillProfileInputs();
     toast('已更新配送位置');
   }
 
@@ -1734,7 +1973,7 @@
   }
   function validateContact(pre) {
     const p = store.profile;
-    if (!p.address.trim()) return flag(pre === 'o' ? 'addr-card' : 'r-addr-card', '請填寫地址（或點「載入展示資料」）');
+    if (!p.address.trim()) return flag(pre === 'o' ? 'addr-card' : 'r-addr-card', '請填寫地址');
     if (!p.name.trim()) return flag(pre + '-name-row', '請填寫聯絡人姓名');
     if (!/^0\d[\d-]{7,11}$/.test(p.phone.trim())) return flag(pre + '-phone-row', '請填寫正確的聯絡電話');
     return true;
@@ -1754,6 +1993,68 @@
     confirmMode = mode;
     go('confirm');
   }
+  /* =========================================================
+     租用契約
+     ========================================================= */
+  function contractHTML(v, c, signedAt) {
+    const p = store.profile;
+    const d = signedAt ? new Date(signedAt) : new Date();
+    const roc = `中華民國 ${d.getFullYear() - 1911} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+    const rows = PRODUCTS.map(x => `<tr><td>${x.kg} 公斤鋼瓶</td><td class="num">每支新臺幣 ${DEPOSIT[x.kg].toLocaleString()} 元</td></tr>`).join('');
+    return `
+      <h4>立契約書人</h4>
+      <p>出租人：${esc(v.company)}（以下簡稱甲方）<br>承租人：${esc(p.name)}（以下簡稱乙方）<br>配送地址：${esc(p.address)}</p>
+      <h4>第一條　租用標的</h4>
+      <p>甲方將經主管機關檢驗合格之液化石油氣鋼瓶出租予乙方使用，乙方向甲方購買之標的為瓶內液化石油氣，鋼瓶所有權仍屬甲方。</p>
+      <h4>第二條　鋼瓶保證金</h4>
+      <p>乙方於首次租用時，應依下列金額按支數支付鋼瓶保證金予甲方，甲方應開立保證金收據：</p>
+      <table>${rows}</table>
+      ${c ? `<p>本次租用：${Object.entries(c.newCyl).map(([kg, n]) => `${kg} 公斤 ${n} 支`).join('、')}，保證金合計新臺幣 ${c.deposit.toLocaleString()} 元。</p>` : ''}
+      <h4>第三條　換瓶與使用</h4>
+      <p>乙方日後叫氣時，應以同規格空瓶交換甲方送達之滿瓶。乙方不得將鋼瓶轉借、轉售、自行灌裝或改裝，並應放置於通風良好、遠離火源之處。</p>
+      <h4>第四條　鋼瓶檢驗與維護</h4>
+      <p>鋼瓶之定期檢驗、維修與報廢更換由甲方負責，費用由甲方負擔。乙方發現鋼瓶或附屬配件有異常時，應立即關閉開關並通知甲方。</p>
+      <h4>第五條　保證金退還</h4>
+      <p>乙方終止租用時，得通知甲方收回鋼瓶。甲方收回鋼瓶並確認外觀無人為損壞後，應憑保證金收據全額無息退還保證金。</p>
+      <h4>第六條　轉換瓦斯行</h4>
+      <p>乙方欲改向其他瓦斯行叫氣時，應先依前條辦理退瓶並取回保證金；乙方亦得選擇放棄保證金並終止本契約，經甲方確認後，本契約即告終止，甲方不再退還保證金。</p>
+      <h4>第七條　損壞與遺失</h4>
+      <p>鋼瓶因乙方故意或重大過失致損壞或遺失者，甲方得自保證金中扣抵修復或重置費用。</p>
+      <h4>第八條　契約期間</h4>
+      <p>本契約自乙方同意之日起生效，至乙方退還全部鋼瓶或依第六條放棄保證金並終止契約之日止。</p>
+      <h4>第九條　個人資料</h4>
+      <p>甲方蒐集乙方之姓名、電話及地址，僅用於叫氣配送、鋼瓶管理與安全通知，不得作其他用途。</p>
+      <h4>第十條　其他</h4>
+      <p>本契約未盡事宜，依消費者保護法及液化石油氣容器相關法令辦理。因本契約涉訟時，雙方同意以臺灣臺東地方法院為第一審管轄法院。</p>
+      <div class="sign">甲方：${esc(v.company)}<br>乙方：${esc(p.name)}<br>${roc}${signedAt ? '　已於線上簽署' : ''}</div>`;
+  }
+  RENDER.contract = function () {
+    if (confirmMode !== 'gas' || !needsContract()) return go('confirm');
+    const c = calc();
+    $('ct-sub').textContent = `${STORE.company}・本次鋼瓶保證金 ${money(c.deposit)}`;
+    $('contract-box').innerHTML = contractHTML(STORE, c);
+    $('contract-box').scrollTop = 0;
+    $('ct-agree').checked = false; $('ct-agree').disabled = true;
+    $('ct-agree-wrap').classList.add('off');
+    $('ct-btn').disabled = true;
+    $('contract-hint').textContent = '請閱讀至契約最下方';
+    $('contract-hint').classList.remove('done');
+    setTimeout(() => onContractScroll($('contract-box')), 50);
+  };
+  function onContractScroll(el) {
+    if (el.scrollTop + el.clientHeight < el.scrollHeight - 12) return;
+    $('ct-agree').disabled = false;
+    $('ct-agree-wrap').classList.remove('off');
+    $('contract-hint').textContent = '已閱讀完畢';
+    $('contract-hint').classList.add('done');
+  }
+  function signContract() {
+    if (!$('ct-agree').checked) return;
+    store.contracts[STORE.id] = { status: 'active', signedAt: Date.now(), name: store.profile.name };
+    save();
+    placeOrder(true);
+  }
+
   function invoiceLabel() {
     if (draft.invoice === 'paper') return '紙本發票或其他';
     return draft.invoice === 'tax' ? `統一編號 (${draft.invoiceVal})` : `手機載具 (${draft.invoiceVal.replace('/', '')})`;
@@ -1764,13 +2065,14 @@
     if (confirmMode === 'gas') {
       const c = calc();
       $('confirm-head').textContent = '確認您的訂單';
-      $('confirm-btn').textContent = '叫瓦斯';
+      $('confirm-btn').textContent = needsContract() ? '下一步：簽署租用契約' : '叫瓦斯';
       $('confirm-rows').innerHTML =
         row('配送地址', esc(p.address)) +
         row('聯絡人', `${esc(p.name)}　${esc(p.phone)}`) +
         row('訂單內容', itemsText(PRODUCTS.filter(x => draft.qty[x.id]).map(x => ({ kg: x.kg, qty: draft.qty[x.id] })))) +
         row('樓層費', draft.elevator ? '有電梯，免收 ($0)' : `${draft.floor}F 無電梯 (${money(c.floorFee)})`) +
-        (c.deposit ? row('鋼瓶押金（首次合作，可退）', money(c.deposit)) : '') +
+        row('瓦斯行', esc(STORE.name)) +
+        (c.deposit ? row('鋼瓶押金（退瓶可退）', Object.entries(c.newCyl).map(([kg, n]) => `${kg}kg x ${n}　${money(n * DEPOSIT[kg])}`).join('<br>') + `<br>合計 ${money(c.deposit)}`) : '') +
         row('配送時間', `${zhDate(draft.date)}　${draft.time}`) +
         row('支付方式', `${draft.payment} (${money(c.total)})`) +
         row('開立收據', esc(invoiceLabel()));
@@ -1791,12 +2093,13 @@
      下單 → Loading → 追蹤
      ========================================================= */
   function showLoading(text, done) {
+    $('loading').querySelector('p').textContent = text;
     $('loading-text').textContent = text;
     $('loading-truck').innerHTML = truckSVG(96);
     const bar = document.querySelector('#loading .bar i');
     bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = '';
     $('loading').classList.add('show');
-    setTimeout(() => { $('loading').classList.remove('show'); done(); }, 2100);
+    setTimeout(() => { $('loading').classList.remove('show'); done(); }, 1200);
   }
   function placeOrder() {
     const p = store.profile, now = new Date();
@@ -1805,16 +2108,16 @@
       const order = {
         no: 'FX' + String(now.getTime()).slice(-6), createdAt: now.getTime(),
         items: PRODUCTS.filter(x => draft.qty[x.id]).map(x => ({ kg: x.kg, qty: draft.qty[x.id], price: x.price })),
-        ...c, elevator: draft.elevator, floor: draft.floor,
+        ...c, vendorId: STORE.id, vendorName: STORE.name, newContract: !!arguments[0], elevator: draft.elevator, floor: draft.floor,
         address: p.address, addrType: p.addrType, name: p.name, phone: p.phone, lat: p.lat, lng: p.lng,
-        date: draft.date, time: draft.time, payment: draft.payment, invoice: invoiceLabel(), tip: 50, arrived: false
+        date: draft.date, time: draft.time, payment: draft.payment, invoice: invoiceLabel(), tip: 0, arrived: false
       };
-      showLoading('正在準備您的訂單', () => { store.active = order; save(); go('track'); });
+      showLoading('正在準備您的訂單', () => { store.active = order; draft.touched = false; save(); go('track'); });
     } else {
       const r = {
         no: 'RP' + String(now.getTime()).slice(-6), createdAt: now.getTime(),
         items: repairDraft.items.slice().sort().map(i => SERVICES[i].t), desc: repairDraft.desc.trim(),
-        address: p.address, name: p.name, phone: p.phone, date: repairDraft.date, time: repairDraft.time
+        address: p.address, name: p.name, phone: p.phone, date: repairDraft.date, time: repairDraft.time, vendorId: STORE.id, vendorName: STORE.name
       };
       showLoading('正在為您安排技師', () => { store.repair = r; save(); go('repair-done'); });
     }
@@ -1830,13 +2133,25 @@
     const tr = el.querySelector('.prog-truck');
     if (tr) tr.style.left = `calc(${t * 100}% - ${t * 62}px)`;
   }
-  const progress = () => store.active ? Math.min(1, (Date.now() - store.active.createdAt) / TRIP_MS) : 0;
-  function stageText(t) {
-    const m = Math.ceil(ETA_MIN * (1 - t));
-    if (t >= 1) return { title: '司機已抵達', line: '師傅已抵達樓下，準備卸裝送達', eta: '已抵達' };
-    if (t < 0.18) return { title: '訂單配送中', line: '前方還有 2 位客戶，請稍候', eta: `預計 ${ETA_MIN} 分鐘抵達` };
-    if (t < 0.36) return { title: '訂單配送中', line: '前方還有 1 位客戶，請稍候', eta: `預計 ${m} 分鐘抵達` };
-    return { title: '司機正前往您的地址', line: `預計 ${m} 分鐘後抵達`, eta: `預計 ${m} 分鐘抵達` };
+  const schedTs = o => new Date(`${o.date}T${o.time}`).getTime();
+  function progress() {
+    const o = store.active;
+    if (!o) return 0;
+    const s = schedTs(o), span = s - o.createdAt;
+    return span <= 0 ? 1 : Math.max(0, Math.min(1, (Date.now() - o.createdAt) / span));
+  }
+  function fmtLeft(ms) {
+    const m = Math.ceil(ms / 60000);
+    if (m < 60) return `${m} 分鐘`;
+    const h = Math.floor(m / 60), r = m % 60;
+    return h >= 24 ? `${Math.floor(h / 24)} 天` : `${h} 小時${r ? ` ${r} 分` : ''}`;
+  }
+  function stageText() {
+    const o = store.active, left = schedTs(o) - Date.now();
+    const sameDay = o.date === ymd(new Date());
+    if (left <= 0) return { title: '已到預計送達時間', line: '收到瓦斯後，請按下方「確認收到瓦斯」', eta: '已到預計送達時間' };
+    if (left <= 60 * 60000) return { title: '即將為您配送', line: `預計 ${fmtLeft(left)}後送達`, eta: `預計 ${fmtLeft(left)}後送達` };
+    return { title: '訂單已排程', line: sameDay ? `今天 ${o.time} 為您送達` : `${zhDate(o.date)} ${o.time} 為您送達`, eta: `距離送達還有 ${fmtLeft(left)}` };
   }
 
   RENDER.track = function () {
@@ -1847,48 +2162,17 @@
     $('t-clock').textContent = `${pad2(d.getHours())} : ${pad2(d.getMinutes())}`;
     buildProg($('t-prog'));
     $('tips').innerHTML = [0, 30, 50, 100].map(v => `<button class="tip num ${o.tip === v ? 'on' : ''}" data-v="${v}" onclick="applyTip(${v})">${v ? '+$' + v : '不用了'}</button>`).join('');
-    setTimeout(initTrackMap, 60);
-    tick(true);
+    const dv = driverOf(vendorById(o.vendorId));
+    $('drv-name').textContent = dv.name;
+    $('drv-exp').textContent = dv.exp;
+    setTimeout(() => initMini('track-map', 'track', [o.lat, o.lng]), 60);
+    tick();
   };
-  function routeFor(o) {
-    const s = DRIVER_START, e = [o.lat, o.lng];
-    const lerp = (k, off) => [s[0] + (e[0] - s[0]) * k + off, s[1] + (e[1] - s[1]) * k - off];
-    return [s, lerp(0.3, 0.0009), lerp(0.6, -0.0007), lerp(0.85, 0.0004), e];
-  }
-  function pointOnRoute(route, t) {
-    const seg = []; let total = 0;
-    for (let i = 0; i < route.length - 1; i++) { const d = Math.hypot(route[i + 1][0] - route[i][0], route[i + 1][1] - route[i][1]); seg.push(d); total += d; }
-    let dist = t * total;
-    for (let i = 0; i < seg.length; i++) {
-      if (dist <= seg[i]) { const k = seg[i] ? dist / seg[i] : 0; return [route[i][0] + (route[i + 1][0] - route[i][0]) * k, route[i][1] + (route[i + 1][1] - route[i][1]) * k]; }
-      dist -= seg[i];
-    }
-    return route[route.length - 1];
-  }
-  let trackTruck = null, trackRoute = null;
-  async function initTrackMap() {
-    await mapsReady;
-    if (!store.active) return;
-    if (!maps.track) maps.track = mkMap('track-map', 'cooperative');
-    const h = maps.track;
-    if (!h) return;
-    mapResize(h);
-    mapClear(h);
-    const o = store.active, route = routeFor(o);
-    trackRoute = route;
-    mapLine(h, route, '#3B82F6', 9, 0.25);
-    mapLine(h, route, '#4C8DF6', 5, 0.95);
-    mapMarker(h, [o.lat, o.lng], '<div class="marker-dest"><svg width="14" height="26" viewBox="0 0 14 26"><circle cx="7" cy="7" r="6" fill="#111"/><rect x="6" y="11" width="2" height="14" rx="1" fill="#111"/></svg></div>', 46, 46, 1);
-    trackTruck = mapMarker(h, route[0], `<div class="marker-truck">${truckSVG(32)}</div>`, 46, 34, 1000);
-    mapFit(h, route, 36);
-  }
-
-  /* 動畫迴圈：追蹤頁、首頁、訂單紀錄的狀態卡同步更新 */
-  function tick(once) {
+  /* 每秒更新：追蹤頁、首頁、訂單紀錄的狀態卡 */
+  function tick() {
     const o = store.active;
     if (o) {
-      const t = progress(), s = stageText(t);
-      const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      const t = progress(), s = stageText();
       const when = `送達時間：${o.time.replace(':', ' : ')}`;
       if (current === 'track') {
         $('t-title').textContent = s.title;
@@ -1896,10 +2180,6 @@
         $('t-line2').textContent = when;
         $('t-eta').textContent = s.eta;
         setProg($('t-prog'), t);
-        if (trackTruck && trackRoute) trackTruck.setPos(pointOnRoute(trackRoute, eased));
-        const btn = $('finish-btn');
-        btn.disabled = t < 1;
-        btn.textContent = t < 1 ? '司機抵達後即可完成訂單' : '確認收到瓦斯';
       }
       ['h', 'hh'].forEach(p => {
         const el = $(p + '-title');
@@ -1908,38 +2188,48 @@
         $(p + '-line').textContent = when;
         setProg($(p + '-prog'), t);
       });
-      if (t >= 1 && !o.arrived) { o.arrived = true; save(); toast('師傅已抵達樓下，請準備空瓶交換'); }
+      if (t >= 1 && !o.arrived) { o.arrived = true; save(); toast('已到預計送達時間，請準備空瓶交換'); }
     }
-    if (!once) requestAnimationFrame(() => tick());
+
   }
 
   function applyTip(v) {
     if (!store.active) return;
     store.active.tip = v; save();
     document.querySelectorAll('.tip').forEach(b => b.classList.toggle('on', +b.dataset.v === v));
-    toast(v ? `感謝您體恤司機搬重鋼瓶上樓！小費 +$${v}` : '已取消小費，仍謝謝您的訂購');
-  }
-  function genSerial() {
-    const A = 'ABCDEFGHJKLMNPRSTUVWXYZ';
-    return A[Math.floor(Math.random() * A.length)] + A[Math.floor(Math.random() * A.length)] + String(Math.floor(Math.random() * 1e8)).padStart(8, '0');
+    toast(v ? `感謝您體恤司機搬重鋼瓶上樓！小費 +$${v}` : '已取消小費');
   }
   function finishOrder() {
     const o = store.active;
     if (!o) return;
     // 首次合作：送達時建立鋼瓶租賃與押金紀錄
-    if (o.deposit) {
+    if (o.deposit && o.newCyl) {
       const today = ymd(new Date());
-      o.items.forEach(it => { for (let k = 0; k < it.qty; k++) store.rentals.unshift({ serial: genSerial(), kg: it.kg, start: today, deposit: DEPOSIT[it.kg], receipt: 'D' + rocDate(today).replace(/\./g, '') + '-' + pad2(store.rentals.length + 1), status: 'renting' }); });
+      Object.entries(o.newCyl).forEach(([kg, n]) => { for (let k = 0; k < n; k++) store.rentals.unshift({ vendorId: o.vendorId, vendorName: o.vendorName, serial: '', kg: +kg, start: today, deposit: DEPOSIT[kg], receipt: '', status: 'renting' }); });
     }
     store.history.unshift({ ...o, completedAt: Date.now() });
     store.active = null; save();
-    toast(o.deposit ? '訂單已完成，押金收據已存入帳戶' : '訂單已完成，謝謝您的支持！');
+    toast(o.deposit ? '訂單已完成，請到「瓦斯租賃與押金紀錄」填寫鋼瓶編號' : '訂單已完成，謝謝您的支持！');
     go('history');
   }
 
   /* =========================================================
      維修完成 / 服務
      ========================================================= */
+  function finishRepair() { store.repair = null; save(); toast('謝謝您，檢修已完成'); go('history'); }
+  function cancelActive() {
+    const o = store.active;
+    // 第一次下單就取消：契約一併作廢
+    if (o && o.newContract && !store.rentals.some(r => r.vendorId === o.vendorId)) delete store.contracts[o.vendorId];
+    store.active = null; save(); closeSheet(); toast('訂單已取消'); go('history');
+  }
+  function cancelRepair() { store.repair = null; save(); closeSheet(); toast('維修預約已取消'); go('history'); }
+  function syncStoreCalls() {
+    document.querySelectorAll('.store-call').forEach(a => {
+      a.classList.toggle('hidden', !STORE.phone);
+      if (STORE.phone) a.href = 'tel:' + STORE.phone.replace(/[^\d+]/g, '');
+    });
+  }
   RENDER['repair-done'] = function () {
     const r = store.repair;
     if (!r) return go('repair');
@@ -1950,7 +2240,12 @@
     $('rd-line2').textContent = r.address;
   };
   RENDER.service = function () {
-    const now = new Date(), m = now.getHours() * 60 + now.getMinutes(), open = m >= OPEN && m < CLOSE;
+    const now = new Date(), m = now.getHours() * 60 + now.getMinutes();
+    const open = m >= toMin(STORE.hours[0]) && m < toMin(STORE.hours[1]);
+    $('store-hours').textContent = STORE.hours.map(h => h.replace(':', ' : ')).join(' ~ ');
+    $('about-photo').classList.toggle('hidden', !STORE.photo);
+    $('about-text').textContent = STORE.about;
+    $('about-range').textContent = STORE.range;
     $('store-card').classList.toggle('closed', !open);
     $('store-title').textContent = open ? '門市營業中' : '門市休息中';
     $('store-note').textContent = open ? '' : '線上叫瓦斯 24 小時受理，開門後優先配送';
@@ -1963,6 +2258,7 @@
     const p = store.profile, n = shortName(p.name);
     $('acct-av').innerHTML = (p.avatar ? `<img src="${p.avatar}" alt="大頭照">` : (n ? esc(n[0]) : ICON.person.replace('width="64" height="64"', 'width="168" height="168"'))) + `<span class="cam">${ICON.camera}</span>`;
     $('acct-name').textContent = n || '訪客';
+    $('acct-vendor').textContent = STORE.name;
   };
   function onAvatar(input) {
     const f = input.files && input.files[0];
@@ -1980,13 +2276,15 @@
     input.value = '';
   }
 
+  const STATUS = { renting: '租賃中・可退押金', returning: '已預約退瓶', returned: '已退還押金', forfeited: '已放棄押金' };
   RENDER.deposit = function () {
     const rs = store.rentals;
-    const live = rs.filter(r => r.status !== 'returned');
-    $('rent-list').innerHTML = live.length ? live.map(r => `
+    const live = rs.map((r, i) => ({ r, i })).filter(x => x.r.vendorId === STORE.id && (x.r.status === 'renting' || x.r.status === 'returning'));
+    $('rent-vendor').textContent = STORE.name;
+    $('rent-list').innerHTML = live.length ? live.map(({ r }) => `
       <div class="rent ${r.status === 'returning' ? 'returning' : ''}">
         <div class="img">${cylinderSVG(r.kg, 1.35)}</div>
-        <div><div class="k">規格：${r.kg}kg${r.status === 'returning' ? '<span class="badge">退桶申請中</span>' : ''}</div><div class="s num">${r.serial}</div></div>
+        <div><div class="k">規格：${r.kg}kg${r.status === 'returning' ? '<span class="badge">已預約退瓶</span>' : ''}</div><div class="s num">${r.serial ? esc(r.serial) : '未填寫編號'}</div></div>
       </div>`).join('') : `<div class="card empty-card"><p>目前沒有租賃中的鋼瓶</p></div>`;
 
     const sorted = rs.map((r, i) => ({ r, i })).sort((a, b) => b.r.start.localeCompare(a.r.start));
@@ -1997,15 +2295,17 @@
           ${ICON.chevDownLg}
         </button>
         <div class="acc-body">
-          <div class="acc-row"><span>鋼瓶編號</span><span class="num">${r.serial}</span></div>
+          <div class="acc-row"><span>瓦斯行</span><span class="vn">${esc(r.vendorName || vendorById(r.vendorId).name)}</span></div>
+          <div class="acc-row"><span>鋼瓶編號</span><input class="acc-input num" value="${esc(r.serial)}" placeholder="例：BO10014329" onchange="editRental(${i}, 'serial', this.value)"></div>
           <div class="acc-row"><span>規格</span><span>${r.kg} 公斤</span></div>
           <div class="acc-row"><span>押金金額</span><span class="num">${money(r.deposit)}</span></div>
-          <div class="acc-row"><span>保證金收據</span><span class="num">${r.receipt}</span></div>
-          <div class="acc-row"><span>狀態</span><span class="${r.status === 'renting' ? 'ok' : 'wait'}">${{ renting: '租賃中・可退押金', returning: '退桶申請中', returned: '已退還押金' }[r.status]}</span></div>
-          <button class="acc-btn" onclick="openSheet('return', ${i})" ${r.status !== 'renting' ? 'disabled' : ''}>${r.status === 'renting' ? '預約退桶並退還押金' : '已送出申請，客服將與您聯繫'}</button>
+          <div class="acc-row"><span>保證金收據</span><input class="acc-input num" value="${esc(r.receipt)}" placeholder="收據編號" onchange="editRental(${i}, 'receipt', this.value)"></div>
+          <div class="acc-row"><span>狀態</span><span class="${r.status === 'renting' ? 'ok' : r.status === 'forfeited' ? '' : 'wait'}">${STATUS[r.status]}</span></div>
+          ${r.status === 'renting' || r.status === 'returning' ? `<button class="acc-btn" onclick="openSheet('return', ${i})">${r.status === 'renting' ? '預約退瓶並退還押金' : '已收到退還押金'}</button>` : ''}
         </div>
-      </div>`).join('') : `<div class="card empty-card"><p>首次叫瓦斯後，押金收據會顯示在這裡</p></div>`;
+      </div>`).join('') : `<div class="card empty-card"><p>第一次叫瓦斯並支付押金後，鋼瓶與押金紀錄會顯示在這裡。</p></div>`;
   };
+  function editRental(i, k, v) { store.rentals[i][k] = v.trim().toUpperCase(); save(); RENDER.deposit(); $('acc-' + i).classList.add('open'); }
   RENDER.addresses = function () { fillProfileInputs(); setTimeout(() => initMini('addr-map', 'addr'), 60); };
   RENDER.payments = function () {
     fillProfileInputs();
@@ -2017,23 +2317,90 @@
   /* =========================================================
      Sheets
      ========================================================= */
+  function contactRows(v = STORE) {
+    const STORE = v;
+    return (STORE.phone ? `<a class="contact-row" href="tel:${STORE.phone.replace(/[^\d+]/g, '')}"><span class="ic">${ICON.phone}</span><div><div class="t">撥打門市電話</div><div class="d num">${esc(STORE.phone)}・叫氣、維修、帳務問題</div></div></a>` : '') +
+      (STORE.line ? `<a class="contact-row" href="${esc(STORE.line)}" target="_blank" rel="noopener"><span class="ic">${ICON.chat}</span><div><div class="t">LINE 官方帳號</div><div class="d">傳照片給師傅判斷問題</div></div></a>` : '');
+  }
   function openSheet(kind, arg) {
     const b = $('sheet-body');
     const p = store.profile;
-    if (kind === 'vendor') {
+    if (kind === 'vendors') {
+      const rs = myRentals(), ct = store.contracts[STORE.id];
+      b.innerHTML = `
+        <h3>瓦斯行清單</h3>
+        <div class="sub">叫瓦斯、維修都會由目前合作的瓦斯行服務</div>
+        <div class="vendor-main">
+          <span class="tag">目前合作</span>
+          <div class="logo"><span class="barcode" data-fixed="1">${barcodeSVG(220, 40, STORE.id)}</span><span class="brand-text" data-fixed="1">${esc(STORE.brand)}</span></div>
+          <div class="vrow"><span>營業時間</span><span class="num">${hoursText(STORE)}</span></div>
+          <div class="vrow"><span>服務範圍</span><span>${esc(STORE.area)}</span></div>
+          <div class="vrow"><span>租用鋼瓶</span><span class="num">${rs.length ? `${rs.length} 支・押金 ${money(depositSum(rs))}` : '尚未租用'}</span></div>
+          <div class="vrow"><span>租用契約</span><span class="num">${ct && ct.status === 'active' ? `${fmtWhen(ct.signedAt).split('・')[0]} 簽署` : '第一次叫瓦斯時簽署'}</span></div>
+          <div class="vlinks">
+            ${ct && ct.status === 'active' ? `<button onclick="openSheet('contractView')">查看契約</button>` : ''}
+            <button onclick="closeSheet(); go('deposit')">押金紀錄</button>
+            <button onclick="openSheet('rules')">押金規範</button>
+          </div>
+        </div>
+        <div class="v-other-title">其他瓦斯行</div>
+        ${VENDORS.filter(v => v.id !== STORE.id).map(v => `
+          <div class="v-row">
+            ${vendorLogo(v)}
+            <div style="min-width:0"><div class="nm">${esc(v.name)}</div><div class="d num">${esc(v.area)}・${hoursText(v)}</div></div>
+            <button class="pill-btn sm" onclick="openSheet('switch', '${v.id}')">改用</button>
+          </div>`).join('')}
+        <div class="sheet-actions one"><button class="btn-fill" onclick="closeSheet()">關閉</button></div>`;
+    } else if (kind === 'switch') {
+      const nv = vendorById(arg), ov = STORE, rs = myRentals(), dep = depositSum(rs);
+      if (store.active) {
+        b.innerHTML = `
+          <h3>目前有進行中的訂單</h3>
+          <div class="sub">請等這筆訂單完成或取消後，再變更瓦斯行。</div>
+          <div class="sheet-actions"><button class="btn-ghost" onclick="openSheet('vendors')">返回</button><button class="btn-fill" onclick="closeSheet(); go('track')">查看訂單</button></div>`;
+      } else if (!rs.length) {
+        b.innerHTML = `
+          <h3>改用 ${esc(nv.name)}？</h3>
+          <div class="sub">您目前沒有向 ${esc(ov.name)} 租用的鋼瓶。改用後，第一次向 ${esc(nv.name)} 叫瓦斯時，需支付鋼瓶押金並簽署租用契約。</div>
+          <div class="sheet-actions"><button class="btn-ghost" onclick="openSheet('vendors')">返回</button><button class="btn-red" onclick="doSwitch('${nv.id}', 'none')">確定改用</button></div>`;
+      } else {
+        b.innerHTML = `
+          <h3>改用 ${esc(nv.name)}</h3>
+          <div class="sub num">您向 ${esc(ov.name)} 租用 ${rs.length} 支鋼瓶，押金共 ${money(dep)}。鋼瓶屬於瓦斯行的資產，變更前請先選擇處理方式：</div>
+          <div class="opt-card">
+            <div class="t"><i>A</i>請舊瓦斯行收桶並退還押金</div>
+            <div class="d">聯絡 ${esc(ov.name)} 預約到府收回鋼瓶，憑保證金收據退還押金 <b class="num">${money(dep)}</b>。收桶完成後即可改用 ${esc(nv.name)}。</div>
+            ${contactRows(ov)}
+            <button class="act btn-fill" onclick="doSwitch('${nv.id}', 'refund')">舊瓦斯行已收桶並退還押金</button>
+          </div>
+          <div class="opt-card">
+            <div class="t"><i>B</i>放棄押金並解約</div>
+            <div class="d">直接終止與 ${esc(ov.name)} 的租用契約，押金 <b class="num">${money(dep)}</b> 不予退還。改用後第一次向 ${esc(nv.name)} 叫瓦斯，仍需支付新的鋼瓶押金並簽約。</div>
+            <label class="agree"><input type="checkbox" onchange="$('forfeit-btn').disabled = !this.checked">我了解押金 ${money(dep)} 將不予退還</label>
+            <button class="act btn-red" id="forfeit-btn" disabled onclick="doSwitch('${nv.id}', 'forfeit')">放棄押金並改用 ${esc(nv.name)}</button>
+          </div>
+          <div class="sheet-actions one"><button class="btn-ghost" onclick="openSheet('vendors')">返回瓦斯行清單</button></div>`;
+      }
+    } else if (kind === 'contractView') {
+      const ct = store.contracts[STORE.id];
+      b.innerHTML = `
+        <h3>液化石油氣鋼瓶租用契約</h3>
+        <div class="sub">${esc(STORE.company)}・${fmtWhen(ct.signedAt)} 簽署</div>
+        <div class="contract-box" style="height:auto; max-height:52vh">${contractHTML(STORE, null, ct.signedAt)}</div>
+        <div class="sheet-actions one"><button class="btn-fill" onclick="openSheet('vendors')">返回</button></div>`;
+    } else if (kind === 'rules') {
       b.innerHTML = `
         <h3>鋼瓶資產與押金規範</h3>
-        <div class="sub">目前常用瓦斯行：<b style="color:#fff">${STORE_NAME}</b></div>
+        <div class="sub">目前合作瓦斯行：<b style="color:#fff">${esc(STORE.name)}</b></div>
         <div class="rule"><div class="no">1</div><div><div class="t">您買的是「氣」，不是「桶」</div><div class="d">鋼瓶是瓦斯行出資定期送驗的合格容器，初次合作時需壓存鋼瓶保證金。</div></div></div>
         <div class="rule"><div class="no">2</div><div><div class="t">方案 A：預約原瓦斯行退桶</div><div class="d">由原瓦斯行派車回收鋼瓶並退還押金，之後即可自由更換瓦斯行。</div></div></div>
         <div class="rule"><div class="no">3</div><div><div class="t">方案 B：簽訂轉移同意書</div><div class="d">放棄舊行押金，由新瓦斯行重新簽署定型化契約並開立新保證金收據。</div></div></div>
-        <div class="sheet-actions"><button class="btn-line" onclick="closeSheet(); go('deposit')">查看押金紀錄</button><button class="btn-fill" onclick="closeSheet()">我知道了</button></div>`;
+        <div class="sheet-actions"><button class="btn-line" onclick="openSheet('vendors')">瓦斯行清單</button><button class="btn-fill" onclick="closeSheet()">我知道了</button></div>`;
     } else if (kind === 'contact') {
       b.innerHTML = `
         <h3>聯絡我們</h3>
-        <div class="sub">${STORE_NAME}・營業時間 08:30 ~ 20:00</div>
-        <button class="contact-row" onclick="closeSheet(); toast('展示版本：將撥打門市電話')"><span class="ic">${ICON.phone}</span><div><div class="t">撥打門市電話</div><div class="d">叫氣、維修、帳務問題</div></div></button>
-        <button class="contact-row" onclick="closeSheet(); toast('展示版本：將開啟 LINE 客服')"><span class="ic">${ICON.chat}</span><div><div class="t">LINE 線上客服</div><div class="d">傳照片給師傅判斷問題</div></div></button>
+        <div class="sub">${STORE.name}・營業時間 ${hoursText(STORE)}</div>
+        ${contactRows()}
         <button class="contact-row" onclick="closeSheet(); openSheet('safety')"><span class="ic">${ICON.flame}</span><div><div class="t">聞到瓦斯味怎麼辦？</div><div class="d">緊急安全須知</div></div></button>`;
     } else if (kind === 'safety') {
       b.innerHTML = `
@@ -2075,13 +2442,32 @@
         <div class="sheet-actions one"><button class="btn-fill" onclick="closeSheet()">關閉</button></div>`;
     } else if (kind === 'return') {
       const r = store.rentals[arg];
+      if (r.status === 'returning') {
+        b.innerHTML = `
+          <h3>已收到退還押金了嗎？</h3>
+          <div class="sub num">鋼瓶 ${esc(r.serial || '（未填寫編號）')}・押金 ${money(r.deposit)}</div>
+          <div class="sheet-actions"><button class="btn-ghost" onclick="closeSheet()">還沒</button><button class="btn-red" onclick="setRentalStatus(${arg}, 'returned', '已記錄退還押金')">已收到</button></div>`;
+      } else {
+        b.innerHTML = `
+          <h3>預約退瓶並退還押金</h3>
+          <div class="sub num">鋼瓶 ${esc(r.serial || '（未填寫編號）')}（${r.kg} 公斤）・押金 ${money(r.deposit)}</div>
+          <div class="rule"><div class="no">1</div><div><div class="t">聯絡門市約定時間</div><div class="d">告知鋼瓶編號與方便收瓶的時間。</div></div></div>
+          <div class="rule"><div class="no">2</div><div><div class="t">師傅到府回收鋼瓶</div><div class="d">回收前請先關閉鋼瓶開關。</div></div></div>
+          <div class="rule"><div class="no">3</div><div><div class="t">憑收據退還押金</div><div class="d">回收時核對保證金收據${r.receipt ? ' ' + esc(r.receipt) : ''}，現場退還押金。</div></div></div>
+          ${contactRows()}
+          <div class="sheet-actions"><button class="btn-ghost" onclick="closeSheet()">取消</button><button class="btn-red" onclick="setRentalStatus(${arg}, 'returning', '已標記為預約退瓶')">已和門市約好</button></div>`;
+      }
+    } else if (kind === 'cancelOrder') {
       b.innerHTML = `
-        <h3>預約退桶並退還押金</h3>
-        <div class="sub num">鋼瓶 ${r.serial}（${r.kg} 公斤）・押金 ${money(r.deposit)}</div>
-        <div class="rule"><div class="no">1</div><div><div class="t">客服致電約定時間</div><div class="d">送出後專人客服將於 24 小時內與您聯繫。</div></div></div>
-        <div class="rule"><div class="no">2</div><div><div class="t">派車回收鋼瓶</div><div class="d">師傅到府回收合格容器，請先關閉鋼瓶開關。</div></div></div>
-        <div class="rule"><div class="no">3</div><div><div class="t">憑收據退還押金</div><div class="d">回收當下核對保證金收據 ${r.receipt}，現場退還押金。</div></div></div>
-        <div class="sheet-actions"><button class="btn-ghost" onclick="closeSheet()">取消</button><button class="btn-red" onclick="requestReturn(${arg})">送出申請</button></div>`;
+        <h3>確定要取消這筆訂單？</h3>
+        <div class="sub">若師傅已經出發，建議直接聯絡門市。</div>
+        ${contactRows()}
+        <div class="sheet-actions"><button class="btn-ghost" onclick="closeSheet()">不取消</button><button class="btn-red" onclick="cancelActive()">取消訂單</button></div>`;
+    } else if (kind === 'cancelRepair') {
+      b.innerHTML = `
+        <h3>確定要取消維修預約？</h3>
+        <div class="sub">${zhDate(store.repair.date)} ${store.repair.time}</div>
+        <div class="sheet-actions"><button class="btn-ghost" onclick="closeSheet()">不取消</button><button class="btn-red" onclick="cancelRepair()">取消預約</button></div>`;
     } else if (kind === 'settings') {
       b.innerHTML = `
         <h3>帳戶設定</h3>
@@ -2091,7 +2477,6 @@
           <div class="field-row"><label>電話</label><input id="s-phone" type="tel" class="num" value="${esc(p.phone)}" placeholder="09xx-xxx-xxx" oninput="setProfile('phone', this.value)"></div>
         </div>
         <button class="sheet-link" style="margin-top:12px" onclick="$('avatar-file').click()">更換大頭照 ${ICON.chevRight}</button>
-        <button class="sheet-link" onclick="fillDemo(); closeSheet()">載入展示資料 ${ICON.chevRight}</button>
         <button class="sheet-link danger" onclick="openSheet('logout')">清除所有資料 ${ICON.chevRight}</button>
         <div class="sheet-actions one"><button class="btn-fill" onclick="closeSheet()">完成</button></div>`;
     } else if (kind === 'logout') {
@@ -2103,10 +2488,19 @@
     $('sheet-bg').classList.add('show');
   }
   function closeSheet() { $('sheet-bg').classList.remove('show'); }
-  function requestReturn(i) {
-    store.rentals[i].status = 'returning'; save();
-    closeSheet(); RENDER.deposit();
-    toast('已送出退桶申請，專人客服將於 24 小時內致電');
+  function doSwitch(vid, how) {
+    const ov = STORE, nv = vendorById(vid);
+    myRentals(ov.id).forEach(r => { if (how === 'refund') r.status = 'returned'; if (how === 'forfeit') r.status = 'forfeited'; r.endedAt = Date.now(); });
+    if (store.contracts[ov.id]) Object.assign(store.contracts[ov.id], { status: 'ended', endedAt: Date.now(), endedHow: how });
+    store.vendorId = nv.id;
+    PRODUCTS.forEach(p => draft.qty[p.id] = 0); draft.touched = false;
+    save(); applyVendor(); closeSheet();
+    toast(how === 'forfeit' ? `已解約並改用 ${nv.name}` : `已改用 ${nv.name}`);
+    go(current);
+  }
+  function setRentalStatus(i, s, msg) {
+    store.rentals[i].status = s; save();
+    closeSheet(); RENDER.deposit(); toast(msg);
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeSheet(); closePicker(); } });
   document.addEventListener('click', e => { if (!e.target.closest('#pay-dd')) closeDD(); });
@@ -2124,15 +2518,16 @@
      ========================================================= */
   buildNav();
   hydrateIcons();
-  document.querySelectorAll('.barcode').forEach(el => el.innerHTML = barcodeSVG(+el.dataset.w, +el.dataset.h));
+  applyVendor();
   window.addEventListener('resize', () => Object.values(maps).forEach(mapResize));
   mapsReady = loadGoogle().then(ok => {
     MAP_PROVIDER = ok ? 'google' : 'leaflet';
     if (ok && ['home', 'history'].includes(current)) RENDER[current]();   // 縮圖改用 Google 靜態地圖
     return ok;
   });
-  go('home');
+  go(store.registered ? 'home' : 'register');
   tick();
+  setInterval(tick, 1000);
 </script>
 </body>
 </html>
